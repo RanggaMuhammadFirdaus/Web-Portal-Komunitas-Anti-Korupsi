@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Korupsi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/76332dff60.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#04336c] font-[Poppins]">        
+
+         <!-- Navbar -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 p-4 bg-[#04336c] transition duration-300">
+    <div class="container mx-auto flex items-center justify-between">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center">
+            <span class="bg-[#002b66] text-white font-bold text-sm px-2 py-1 rounded-full w-5 h-5 flex items-center justify-center">AK</span>
+            <span id="navbar-title" class="text-white text-2xl font-bold ml-2">AntiKorupsi</span>
+        </a>
+        
+        <!-- Navbar Menu -->
+        <ul id="nav-items" class="hidden md:flex space-x-1 text-white ml-2 items-center">
+            <li><a href="#" class="nav-item">Beranda</a></li>
+            <li><a href="#about" class="nav-item">Tentang</a></li>
+            
+            <!-- Platform with Submenu -->
+            <li class="relative">
+                <a href="#" class="nav-item toggle-menu flex items-center space-x-1" data-menu="platform-menu">
+                    <span>Fitur</span>
+                    <svg class="w-4 h-4 transition-transform duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
+                <ul id="platform-menu" class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg">
+                    <li><a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200">Fitur 1</a></li>
+                    <li><a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200">Fitur 2</a></li>
+                    <li><a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200">Fitur 3</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#dampak" class="nav-item">Dampak</a></li>
+            <li><a href="#kegiatan" class="nav-item">Kegiatan</a></li>
+
+            <!-- Bergabung with Submenu -->
+            <li class="relative">
+                <a href="#" class="nav-item toggle-menu flex items-center space-x-1" data-menu="join-menu">
+                    <span>Bergabung</span>
+                    <svg class="w-4 h-4 transition-transform duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
+                <ul id="join-menu" class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg">
+                    <li><a href="#daftar" class="block px-4 py-2 hover:bg-gray-200">Daftar</a></li>
+                </ul>
+            </li>
+
+            <!-- Login Button -->
+            <li>
+                <a href="#" class="bg-[#176BFF] text-white px-4 py-2 rounded-md font-semibold hidden md:flex items-center">Masuk</a>
+            </li>
+        </ul>
+
+        <!-- Menu Toggle Button (Hamburger) for Mobile -->
+        <button id="menu-toggle" class="text-white text-2xl md:hidden">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+   
+
+       <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-[#04336c] text-white flex flex-col items-center justify-center z-50 p-4">
+        
+        <!-- Close Button -->
+        <button id="close-menu" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+
+        <!-- Mobile Menu List -->
+        <ul class="text-center space-y-6 text-lg font-semibold w-full">
+            <li><a href="#" class="block">Beranda</a></li>
+            <li><a href="#about" class="block">Tentang</a></li>
+
+            <!-- Fitur Dropdown -->
+            <li>
+                <button class="mobile-toggle flex items-center justify-center w-full">
+                    <span>Fitur</span>
+                    <svg class="w-4 h-4 ml-1 transition-transform transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <ul class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2">
+                    <li><a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200">Fitur 1</a></li>
+                    <li><a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200">Fitur 2</a></li>
+                    <li><a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200">Fitur 3</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#dampak" class="block">Dampak</a></li>
+            <li><a href="#kegiatan" class="block">Kegiatan</a></li>
+
+            <!-- Bergabung Dropdown -->
+            <li>
+                <button class="mobile-toggle flex items-center justify-center w-full">
+                    <span>Bergabung</span>
+                    <svg class="w-4 h-4 ml-1 transition-transform transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <ul class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2">
+                    <li><a href="#daftar" class="block px-4 py-2 hover:bg-gray-200">Daftar</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Login Button -->
+        <button id="login-button" class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold">Masuk</button>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="bg-[#04336c] text-white py-16">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class=" px-13">
+                <!-- Portal Komunitas Anti Korupsi -->
+                <span class="inline-flex items-center bg-[#1a497c] text-white px-6 py-1 rounded-full border border-white text-sm md:text-base bg-opacity-100 tracking-wide mt-12">
+                    <!-- Image Icon -->
+                    <img src="images/shield.png" alt="Shield Icon" class="w-5 h-5 mr-2">                    
+                    Portal Komunitas Anti Korupsi
+                </span> 
+
+
+                <!-- Main Heading -->
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight mt-3">
+                    Bersama untuk <br> Masa Depan yang <br> 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-950 to-blue-600 font-extrabold">
+                        Transparan
+                    </span>
+                </h1>
+
+                <!-- Description -->
+                <p class="mt-4 text-lg">Bergabunglah dengan komunitas kami dalam melawan korupsi. Bersama, kita dapat menciptakan masyarakat yang lebih jujur, adil, dan transparan.</p>
+
+                <!-- Buttons -->
+                <div class="mt-6 flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 w-full">
+                    <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold">Bergabung Sekarang</a>
+                    <a href="#" class="bg-gray-300 text-blue-900 px-6 py-3 rounded-md font-semibold transition duration-300 hover:bg-blue-900 hover:text-white">
+                        Pelajari Lebih Lanjut
+                    </a>
+                </div>
+            </div>
+            <!-- Image Section -->
+            <div class="md:w-1/2 px-6 mt-6 md:mt-0 hidden md:block">
+                <img src="images/landingpage2.jpg" alt="Anti Korupsi" class="hero-image w-full md:w-[700px] lg:w-[700px] rounded-lg shadow-lg">
+            </div>
+        </div>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="flex flex-col items-center mt-10 opacity-70 animate-bounce">            
+            <a href="#tokoh" class="scroll-down">
+                <p class="text-white text-lg font-semibold mb-2">Gulir</p>
+                <svg class="w-10 h-10 text-white opacity-70" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </a>
+        </div>
+
+    </header>
+
+    <!-- Profil Tokoh Section -->
+    <section id="tokoh" class="bg-[#021c44] text-white py-16">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <!-- Gambar Tokoh -->
+            <div class="md:w-1/2 px-6 flex justify-center">
+                <img src="images/Rangga.jpeg" alt="Rangga Muhammad Firdaus" class="w-[400px] md:w-[500px] rounded-lg shadow-lg">
+            </div>
+
+            <!-- Deskripsi Tokoh -->
+            <div class="md:w-1/2 px-6">
+                <p class="text-sm uppercase text-gray-300 tracking-wide">Ketua Anti Korupsi</p>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2">Rangga <br> <span class="text-blue-400">Muhammad. F</span></h2>
+
+                <p class="mt-4 text-lg italic">"Jangan KORUPSI kocakkkkkk!!!!!!!"</p>
+
+                <div class="mt-6 space-y-3">
+                    <p><span class="font-bold text-blue-400">01.</span> Menuntaskan amanah sebagai <strong>Mahasiswa IDE LPKIA (2021—2025)</strong>.</p>
+                    <p><span class="font-bold text-blue-400">02.</span> Menjadi <strong>Anggota LOOP (LPKIA Object Oriented Programming) (2022—2023)</strong>.</p>
+                    <p><span class="font-bold text-blue-400">03.</span> Inisiator gerakan <strong>Para Remaja (2024)</strong>.</p>
+                </div>
+
+                <!-- Tombol -->
+                <div class="mt-6">
+                    <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold">Lebih Kenali Rangga</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+<section id="about" class="bg-white py-16">
+    <div class="container mx-auto text-center">
+        <h3 class="text-sm font-semibold text-blue-600 uppercase">TENTANG MISI KAMI</h3>
+        <h2 class="text-4xl font-bold text-[#012A5B] mt-2">Membangun Masyarakat Bebas Korupsi</h2>
+        <p class="mt-4 text-gray-600">
+            Komunitas kami berdedikasi untuk memerangi korupsi melalui aksi kolektif, edukasi, <br> 
+            dan advokasi. Kami percaya transparansi adalah fondasi masyarakat yang adil.
+        </p>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Integritas -->
+            <div class="text-center">
+                <div class="flex justify-center">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/security.png" alt="Integritas Icon" class="w-12 h-12">
+                    </div>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-900 mt-4">Integritas</h3>
+                <p class="text-gray-600 mt-2">Kami menjunjung tinggi standar <br> kejujuran dan etika tertinggi dalam <br> setiap aksi dan inisiatif kami.</p>
+            </div>
+
+            <!-- Keadilan -->
+            <div class="text-center">
+                <div class="flex justify-center">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/timbangan.png" alt="Keadilan Icon" class="w-12 h-12">
+                    </div>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-900 mt-4">Keadilan</h3>
+                <p class="text-gray-600 mt-2">Kami bekerja untuk memastikan akses <br> yang setara terhadap keadilan dan <br> akuntabilitas untuk semua lapisan <br> masyarakat.</p>
+            </div>
+
+            <!-- Komunitas -->
+            <div class="text-center">
+                <div class="flex justify-center">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/group.png" alt="Komunitas Icon" class="w-12 h-12">
+                    </div>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-900 mt-4">Komunitas</h3>
+                <p class="text-gray-600 mt-2">Kami membangun lingkungan <br> kolaboratif di mana warga dapat <br> bekerja sama untuk mendorong <br> perubahan yang berarti.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Platform Section -->
+<section id="platform" class="bg-[#e6f0ff] py-16">
+    <div class="container mx-auto text-center">
+        <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-widest">PLATFORM KAMI</h3>
+        <h2 class="text-3xl font-extrabold text-[#012A5B] mt-2">Alat yang Kuat <br> untuk Transparansi</h2>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+            Platform kami menyediakan alat dan sumber daya komprehensif untuk membantu warga, organisasi, dan pemerintah memerangi korupsi secara efektif.
+        </p>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Laporan Korupsi -->
+            <div class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-center left-0 mb-4">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/flag.png" alt="Laporkan Korupsi" class="w-5 h-5">
+                    </div>
+                </div>
+                <h3 class="text-xl text-left font-semibold text-blue-900">Laporkan Korupsi</h3>
+                <p class="text-gray-600 text-left mt-2">Laporkan insiden korupsi secara aman melalui sistem pelaporan anonim kami.</p>
+            </div>
+
+            <!-- Dukungan Komunitas -->
+            <div class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-center left-0 mb-4">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/hand.png" alt="Dukungan Komunitas" class="w-5 h-5">
+                    </div>
+                </div>
+                <h3 class="text-xl text-left font-semibold text-blue-900">Edukasi Anti Korupsi</h3>
+                <p class="text-gray-600 text-left mt-2">Akses materi edukasi komprehensif tentang cara mencegah daan melawan korupsi.</p>
+            </div>
+
+            <!-- Akses Sumber Daya -->
+            <div class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-center left-0 mb-4">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/key.png" alt="Akses Sumber Daya" class="w-5 h-5">
+                    </div>
+                </div>
+                <h3 class="text-xl text-left font-semibold text-blue-900">Akses Sumber Daya</h3>
+                <p class="text-gray-600 text-left mt-2">Akses alat anti-korupsi, panduan, dan materi edukasi yang komprehensif.</p>
+            </div>
+
+            <!-- Jaringan Global -->
+            <div class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-center left-0 mb-4">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/global.png" alt="Akses Sumber Daya" class="w-5 h-5">
+                    </div>
+                </div>
+                <h3 class="text-xl text-left font-semibold text-blue-900">Jaringan Global</h3>
+                <p class="text-gray-600 text-left mt-2">Bergabung dengan jaringan aktivis dan organisasi anti-korupsi di seluruh dunia.</p>
+            </div>
+
+            <!-- Indeks Transparansi -->
+            <div class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-center left-0 mb-4">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/search.png" alt="Akses Sumber Daya" class="w-5 h-5">
+                    </div>
+                </div>
+                <h3 class="text-xl text-left font-semibold text-blue-900">Indeks Transparansi</h3>
+                <p class="text-gray-600 text-left mt-2">Jelajahi database peringkat transparansi untuk institusi publik.</p>
+            </div>
+
+            <!-- Informasi Terverifikasi -->
+            <div class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-center left-0 mb-4">
+                    <div class="bg-[#E8F1FF] p-3 rounded-full">
+                        <img src="images/checklist.png" alt="Akses Sumber Daya" class="w-5 h-5">
+                    </div>
+                </div>
+                <h3 class="text-xl text-left font-semibold text-blue-900">Informasi Terverifikasi</h3>
+                <p class="text-gray-600 text-left mt-2">Dapatkan informasi yang telah diverifikasi tentang kasus korupsi dan metode pencegahannya.</p>
+            </div>            
+        </div>
+    </div>
+</section>
+
+<!-- Dampak Kami Section -->
+<section id="dampak" class="bg-[#012A5B] py-16 text-white">
+    <div class="container mx-auto text-center">
+        <h3 class="text-sm font-semibold text-blue-300 uppercase tracking-widest">DAMPAK KAMI</h3>
+        <h2 class="text-3xl font-extrabold mt-2">Membuat Perubahan Bersama</h2>
+        <p class="mt-4 text-blue-200 max-w-2xl mx-auto">
+            Melalui aksi kolektif dan dedikasi, komunitas kami telah mencapai tonggak penting dalam pemberantasan korupsi.
+        </p>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-[#0A3D72] bg-opacity-50 p-6 rounded-lg text-center border border-[#0D4F8B]">
+                <h3 class="text-4xl font-extrabold text-[#6EC6FF]">10,000+</h3>
+                <p class="mt-2 text-blue-200">Anggota Komunitas</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-[#0A3D72] bg-opacity-50 p-6 rounded-lg text-center border border-[#0D4F8B]">
+                <h3 class="text-4xl font-extrabold text-[#6EC6FF]">500+</h3>
+                <p class="mt-2 text-blue-200">Laporan Ditangani</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-[#0A3D72] bg-opacity-50 p-6 rounded-lg text-center border border-[#0D4F8B]">
+                <h3 class="text-4xl font-extrabold text-[#6EC6FF]">50+</h3>
+                <p class="mt-2 text-blue-200">Organisasi Mitra</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-[#0A3D72] bg-opacity-50 p-6 rounded-lg text-center border border-[#0D4F8B]">
+                <h3 class="text-4xl font-extrabold text-[#6EC6FF]">120+</h3>
+                <p class="mt-2 text-blue-200">Sumber Daya Edukasi</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Kegiatan Section -->
+<section id="kegiatan" class="bg-white py-16 text-gray-900">
+    <div class="container mx-auto text-center">
+        <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-widest">RIWAYAT KEGIATAN</h3>
+        <h2 class="text-3xl font-extrabold mt-2">Kegiatan Yang Telah Kami Laksanakan</h2>
+        <p class="mt-4 text-gray-700 max-w-2xl mx-auto">
+            Berbagai kegiatan yang telah kami selenggarakan dalam upaya memperkuat gerakan anti korupsi dan membangun kesadaran masyarakat.
+        </p>
+
+        <!-- Carousel Container -->
+        <div class="relative mt-12 overflow-hidden">
+            <div class="flex space-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth">
+                <!-- Activity 1 -->
+                <div class="min-w-[300px] md:min-w-[400px] bg-gray-100 rounded-lg shadow-md snap-center p-6">
+                    <img src="images/kegiatan1.PNG" alt="Konferensi Anti Korupsi" class="rounded-t-lg w-full h-48 object-cover">
+                    <h3 class="font-semibold text-lg">Seminar Transparansi Keuangan</h3>
+                    <p class="text-sm text-gray-600">Seminar yang membahas pentingnya transparansi keuangan dalam mengurangi risiko korupsi.</p>
+                    <div class="mt-2 text-sm">
+                        📅 28 Februari 2024 <br>
+                        📍 Universitas Indonesia <br>
+                        👥 200 Peserta
+                    </div>
+                    <button onclick="redirectToDetail('Seminar Transparansi Keuangan', 'Seminar yang membahas pentingnya transparansi keuangan dalam mengurangi risiko korupsi.', '28 Februari 2024', 'Universitas Indonesia', '200 Peserta', 'images/kegiatan1.PNG')" class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                        Lihat Detail
+                    </button>
+                </div>
+
+                <!-- Activity 2 -->
+                <div class="min-w-[300px] md:min-w-[400px] bg-gray-100 rounded-lg shadow-md snap-center p-6">
+                    <img src="images/kegiatan2.PNG" alt="Konferensi Anti Korupsi" class="rounded-t-lg w-full h-48 object-cover">
+                    <h3 class="font-semibold text-lg">Forum Diskusi Kebijakan Publik</h3>
+                    <p class="text-sm text-gray-600">Forum diskusi yang mengkaji kebijakan publik dari perspektif anti korupsi dan tata kelola yang baik.</p>
+                    <div class="mt-2 text-sm">
+                        📅 10 Maret 2024 <br>
+                        📍 Balai Kota Surabaya <br>
+                        👥 150 Peserta
+                    </div>
+                    <button onclick="redirectToDetail('Forum Diskusi Kebijakan Publik', 'Forum diskusi yang mengkaji kebijakan publik dari perspektif anti korupsi dan tata kelola yang baik.', '10 Maret 2024', 'Balai Kota Surabaya', '150 Peserta', 'images/kegiatan2.PNG')" class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                        Lihat Detail
+                    </button>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="min-w-[300px] md:min-w-[400px] bg-gray-100 rounded-lg shadow-md snap-center p-6">
+                    <img src="images/kegiatan3.PNG" alt="Konferensi Anti Korupsi" class="rounded-t-lg w-full h-48 object-cover">
+                    <h3 class="font-semibold text-lg">Forum Diskusi Kebijakan Publik Dunia  </h3>
+                    <p class="text-sm text-gray-600">Forum diskusi yang mengkaji kebijakan publik dari perspektif anti korupsi dan tata kelola yang baik.</p>
+                    <div class="mt-2 text-sm">
+                        📅 10 Maret 2024 <br>
+                        📍 Balai Kota Surabaya <br>
+                        👥 150 Peserta
+                    </div>
+                    <button onclick="redirectToDetail('Forum Diskusi Kebijakan Publik Dunia', 'Forum diskusi yang mengkaji kebijakan publik dari perspektif anti korupsi dan tata kelola yang baik.', '10 Maret 2024', 'Balai Kota Surabaya', '150 Peserta', 'images/kegiatan3.PNG')" class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                        Lihat Detail
+                    </button>
+                </div>
+
+                <!-- Activity 4 -->
+                <div class="min-w-[300px] md:min-w-[400px] bg-gray-100 rounded-lg shadow-md snap-center p-6">
+                    <img src="images/kegiatan4.PNG" alt="Konferensi Anti Korupsi" class="rounded-t-lg w-full h-48 object-cover">
+                    <h3 class="font-semibold text-lg">Forum Diskusi Kebijakan Publik Masyarakat</h3>
+                    <p class="text-sm text-gray-600">Forum diskusi yang mengkaji kebijakan publik dari perspektif anti korupsi dan tata kelola yang baik.</p>
+                    <div class="mt-2 text-sm">
+                        📅 10 Maret 2024 <br>
+                        📍 Balai Kota Surabaya <br>
+                        👥 150 Peserta
+                    </div>
+                    <button onclick="redirectToDetail('Forum Diskusi Kebijakan Publik Masyarakat', 'Forum diskusi yang mengkaji kebijakan publik dari perspektif anti korupsi dan tata kelola yang baik.', '10 Maret 2024', 'Balai Kota Surabaya', '150 Peserta', 'images/kegiatan4.PNG')" class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                        Lihat Detail
+                    </button>
+                </div>
+
+                <!-- Activity 5 -->
+                <div class="min-w-[300px] md:min-w-[400px] bg-gray-100 rounded-lg shadow-md snap-center p-6">
+                    <img src="images/kegiatan1.PNG" alt="Konferensi Anti Korupsi" class="rounded-t-lg w-full h-48 object-cover">
+                    <h3 class="font-semibold text-lg">Pelatihan Audit Investigasi</h3>
+                    <p class="text-sm text-gray-600">Pelatihan khusus tentang teknik audit investigasi untuk mengungkap kasus-kasus korupsi.</p>
+                    <div class="mt-2 text-sm">
+                        📅 5 April 2024 <br>
+                        📍 Hotel Mulia Jakarta <br>
+                        👥 80 Peserta
+                    </div>
+                    <button onclick="redirectToDetail('Pelatihan Audit Investigasi', 'Pelatihan khusus tentang teknik audit investigasi untuk mengungkap kasus-kasus korupsi.', '5 April 2024', 'Hotel Mulia Jakarta', '80 Peserta', 'images/kegiatan1.PNG')" class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                        Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+
+        <button onclick="window.location.href='kegiatan.html'"
+    class="mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+    Lihat Semua Kegiatan
+</button>
+
+    </div>
+</section>
+
+
+
+<!-- Section Bergabung dengan Komunitas -->
+<section id="bergabung" class="bg-gradient-to-r from-[#0A2A66] via-[#05204D] to-[#01143A] flex items-center justify-center py-16 px-6">
+    <div class="max-w-4xl w-full bg-[#E8EEF7] rounded-xl shadow-lg flex flex-col md:flex-row overflow-hidden border border-[#CBD6E2]">
+        <!-- Bagian Teks -->
+        <div class="w-full md:w-[55%] p-8">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-[#0A2A66] leading-tight">
+                Bergabung dengan <br> Komunitas Kami
+            </h2>
+            <p class="text-[#4A6178] mt-3 text-base md:text-lg leading-relaxed">
+                Jadilah bagian dari gerakan yang berkembang yang berdedikasi untuk mendorong transparansi
+                dan akuntabilitas. Bersama, kita bisa membuat perubahan.
+            </p>
+            
+            <div class="mt-5">
+                <input type="email" placeholder="Masukkan email Anda" 
+                    class="w-full p-3 border border-gray-300 rounded-lg text-gray-700 focus:ring focus:ring-blue-300 shadow-sm text-lg bg-white">
+            </div>
+
+            <button class="mt-3 w-full bg-[#157AFF] hover:bg-[#106ED2] text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center transition-all text-lg">
+                Berlangganan Newsletter 
+                <span class="ml-2 text-xl">➜</span>
+            </button>
+            
+            <p class="text-[#5D738A] text-sm mt-2 leading-snug">
+                Dengan berlangganan, Anda menyetujui <span class="text-[#3D5267] font-medium">Kebijakan Privasi</span> dan <span class="text-[#3D5267] font-medium">Ketentuan Layanan</span> kami.
+            </p>
+        </div>
+
+        <!-- Bagian Gambar -->
+        <div class="w-full md:w-[45%] hidden md:block">
+            <img src="images/laptop.png" alt="Bergabung dengan Komunitas" class="w-full h-full object-cover">
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-[#001533] text-gray-300 py-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Kolom 1: Logo dan Deskripsi -->
+            <div>
+                <h2 class="text-lg font-bold flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    AntiKorupsi
+                </h2>
+                <p class="text-gray-400 mt-2 text-sm leading-relaxed">
+                    Membangun masyarakat yang transparan dan bebas korupsi melalui aksi komunitas dan edukasi.
+                </p>
+                <!-- Sosial Media -->
+                <div class="flex space-x-4 mt-3 text-gray-400">
+                    <a href="#" class="hover:text-white">
+                        <i class="fa-brands fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-white">
+                        <i class="fa-brands fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-white">
+                        <i class="fa-brands fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-white">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Kolom 2: Tautan Cepat -->
+            <div>
+                <h3 class="font-semibold text-white">Tautan Cepat</h3>
+                <ul class="mt-3 space-y-2">
+                    <li><a href="#" class="hover:text-blue-400">Beranda</a></li>
+                    <li><a href="#about" class="hover:text-blue-400">Tentang</a></li>
+                    <li><a href="#platform" class="hover:text-blue-400">Fitur</a></li>
+                    <li><a href="#dampak" class="hover:text-blue-400">Dampak</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Bergabung</a></li>
+                </ul>
+            </div>
+    
+            <!-- Kolom 3: Sumber Daya -->
+            <div>
+                <h3 class="font-semibold text-white">Sumber Daya</h3>
+                <ul class="mt-3 space-y-2">
+                    <li><a href="#" class="hover:text-blue-400">Blog</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Studi Kasus</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Laporan</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Edukasi</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Alat</a></li>
+                </ul>
+            </div>
+    
+            <!-- Kolom 4: Kontak -->
+            <div>
+                <h3 class="font-semibold text-white">Hubungi Kami</h3>
+                <ul class="mt-3 space-y-2">
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-envelope mr-2"></i>
+                        <a href="mailto:kontak@antikorupsi.org" class="hover:text-blue-400 truncate overflow-hidden block w-full">
+                            kontak@antikorupsi.org
+                        </a>
+                        
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-brands fa-github mr-2"></i>
+                        <a href="#" class="hover:text-blue-400 truncate overflow-hidden block w-full">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <footer class="bg-[#001533] text-white py-10">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Portal Komunitas AntiKorupsi. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    let navbar = document.getElementById("navbar");
+    let menuToggle = document.getElementById("menu-toggle");
+    let mobileMenu = document.getElementById("mobile-menu");
+    let closeMenu = document.getElementById("close-menu");
+    let menuLinks = document.querySelectorAll("#mobile-menu a");
+    let toggleMenus = document.querySelectorAll(".toggle-menu");
+
+    // Efek navbar berubah warna saat scroll (TIDAK DIUBAH)
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 10) {
+            navbar.classList.add("nav-scrolled");
+        } else {
+            navbar.classList.remove("nav-scrolled");
+        }
+    });
+
+    // Toggle mobile menu saat tombol hamburger ditekan
+    if (menuToggle) {
+        menuToggle.addEventListener("click", function () {
+            mobileMenu.classList.toggle("active");
+        });
+    }
+
+    // Tutup menu mobile saat tombol close ditekan
+    if (closeMenu) {
+        closeMenu.addEventListener("click", function () {
+            mobileMenu.classList.remove("active");
+        });
+    }
+
+    // Tutup menu mobile jika salah satu item menu diklik
+    menuLinks.forEach(item => {
+        item.addEventListener("click", function () {
+            mobileMenu.classList.remove("active");
+        });
+    });
+
+    // Toggle submenu saat menu diklik
+    toggleMenus.forEach(menu => {
+        menu.addEventListener("click", function (event) {
+            event.preventDefault();
+            const menuId = menu.getAttribute("data-menu");
+            const submenu = document.getElementById(menuId);
+            
+            if (submenu) {
+                const isHidden = submenu.classList.contains("hidden");
+
+                // Tutup semua submenu lain sebelum membuka yang baru
+                document.querySelectorAll(".submenu").forEach(item => {
+                    item.classList.add("hidden");
+                });
+
+                // Tampilkan submenu yang dipilih
+                if (isHidden) {
+                    submenu.classList.remove("hidden");
+                }
+            }
+        });
+    });
+
+    
+        // Toggle Submenus in Mobile
+        document.querySelectorAll('.mobile-toggle').forEach((toggle) => {
+            toggle.addEventListener("click", function () {
+                let submenu = this.nextElementSibling;
+                submenu.classList.toggle("hidden");
+                let icon = this.querySelector("svg");
+                icon.classList.toggle("rotate-180");
+            });
+        });
+
+    // Tutup submenu jika klik di luar area menu
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".relative")) {
+            document.querySelectorAll(".submenu").forEach(menu => {
+                menu.classList.add("hidden");
+            });
+        }
+    });
+
+    // Fungsi carousel (slider otomatis)
+    const carouselItems = document.getElementById("carouselItems");
+    if (carouselItems) {
+        let index = 0;
+        const totalItems = carouselItems.children.length;
+
+        function updateCarousel() {
+            carouselItems.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        setInterval(() => {
+            index = (index + 1) % totalItems;
+            updateCarousel();
+        }, 5000);
+    }
+});
+
+const carousel = document.querySelector("#kegiatan .overflow-x-auto");
+    let scrollAmount = 0;
+    const slideInterval = setInterval(() => {
+        if (scrollAmount < carousel.scrollWidth - carousel.clientWidth) {
+            scrollAmount += carousel.clientWidth;
+        } else {
+            scrollAmount = 0;
+        }
+        carousel.scrollTo({ left: scrollAmount, behavior: "smooth" });
+    }, 3000); // Auto-slide every 3 seconds
+
+    function redirectToDetail(title, description, date, location, participants, image) {
+    // Encode the data for safe URL usage
+    const url = `detail.html?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}&date=${encodeURIComponent(date)}&location=${encodeURIComponent(location)}&participants=${encodeURIComponent(participants)}&image=${encodeURIComponent(image)}`;
+    
+    // Redirect to the detail page
+    window.location.href = url;
+}
+
+    </script>
+    
+    
+</body>
+</html>

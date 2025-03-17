@@ -1,0 +1,332 @@
+/* Default navbar styles */
+#navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+/* Hover effect for underline */
+.nav-item:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* Mobile Menu */
+#mobile-menu {
+    background-color: rgba(4, 25, 56, 0.99);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    z-index: 10000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.hidden { display: none; }
+.show { display: block !important; }
+
+/* Show menu when active */
+#mobile-menu.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Adjust menu item alignment */
+#mobile-menu ul {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
+
+#mobile-menu ul li a {
+    display: block;
+    padding: 15px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Make the "Masuk" button full width */
+#mobile-menu button {
+    width: 90%;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.2rem;
+}
+
+/* Ensure the toggle button is always clickable */
+#menu-toggle {
+    z-index: 1100;
+    position: relative;
+}
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #navbar {
+        padding: 10px 15px;
+    }
+
+    .nav-item {
+        font-size: 0.9rem; /* Reduce font size for small screens */
+    }
+
+    .login-btn {
+        padding: 8px 15px; /* Adjust button size */
+        font-size: 0.9rem;
+    }
+
+    #menu-toggle {
+        font-size: 1.5rem; /* Larger menu icon */
+    }
+
+    #mobile-menu ul li a {
+        font-size: 1rem; /* Adjust text size in mobile menu */
+    }
+
+    #mobile-menu button {
+        font-size: 1rem; /* Adjust button size in mobile */
+    }
+
+    .hero-image {
+        display: none;
+    }
+}
+
+.dropdown-menu {
+    margin-top: 8px; /* Memberi jarak antara tombol dengan dropdown */
+    min-width: 150px; /* Menyesuaikan lebar dropdown */
+    z-index: 50;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.group:hover .dropdown-menu, .dropdown-menu.show {
+    display: block;
+}
+
+/* Tombol Close Navbar Mobile */
+#close-menu {
+    position: absolute;
+    top: 20px;
+    left: 180px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#close-menu:hover {
+    color: #ffcc00; /* Highlight on hover */
+}
+
+
+
+@media (max-width: 480px) {
+    #navbar {
+        padding: 8px 10px;
+    }
+
+    .nav-item {
+        font-size: 0.85rem;
+    }
+
+    .login-btn {
+        padding: 7px 12px;
+        font-size: 0.85rem;
+    }
+
+    #menu-toggle {
+        font-size: 1.4rem;
+    }
+
+    #mobile-menu ul li a {
+        font-size: 0.9rem;
+    }
+
+    #mobile-menu button {
+        font-size: 0.9rem;
+    }
+}
+
+/* Tambahkan aturan untuk iPad Air (820x1180) */
+@media (max-width: 820px) {
+    #navbar {
+        padding: 12px 18px;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+    }
+
+    .login-btn {
+        padding: 10px 18px;
+        font-size: 1rem;
+    }
+
+    #menu-toggle {
+        font-size: 1.6rem;
+    }
+
+    #mobile-menu ul li a {
+        font-size: 1.1rem;
+    }
+
+    #mobile-menu button {
+        font-size: 1.1rem;
+    }
+}
+
+/* Tambahkan aturan untuk iPad Air (820x1180) */
+@media (max-width: 820px) {
+    #navbar {
+        padding: 12px 18px;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+    }
+
+    .login-btn {
+        padding: 10px 18px;
+        font-size: 1rem;
+    }
+
+    #menu-toggle {
+        font-size: 1.6rem;
+    }
+
+    #mobile-menu ul li a {
+        font-size: 1.1rem;
+    }
+
+    #mobile-menu button {
+        font-size: 1.1rem;
+    }
+}
+
+/* Tambahkan aturan untuk iPad Mini (768x1024) */
+@media (max-width: 768px) {
+    #navbar {
+        padding: 10px 16px;
+    }
+
+    .nav-item {
+        font-size: 0.95rem;
+    }
+
+    .login-btn {
+        padding: 9px 16px;
+        font-size: 0.95rem;
+    }
+
+    #menu-toggle {
+        font-size: 1.5rem;
+    }
+
+    #mobile-menu ul li a {
+        font-size: 1rem;
+    }
+
+    #mobile-menu button {
+        font-size: 1rem;
+    }
+}
+
+/* Pastikan tampilan optimal untuk tablet */
+@media (min-width: 821px) and (max-width: 1024px) {
+    .nav-items {
+        display: flex;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+}
+
+/* Perbaikan Footer */
+footer {
+    min-height: 220px;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer .column {
+    flex: 1;
+    min-width: 180px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 820px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    footer .column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 35px 15px;
+    }
+
+    footer .column {
+        min-width: 160px;
+        text-align: center;
+    }
+}
+
+
+
+@media (min-width: 1025px) {
+    /* Pastikan menu utama tampil di layar lebar */
+    .nav-items {
+        display: flex !important;
+    }
+
+    /* Sembunyikan hamburger button */
+    #menu-toggle {
+        display: none;
+    }
+}
