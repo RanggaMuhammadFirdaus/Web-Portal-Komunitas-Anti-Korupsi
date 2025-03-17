@@ -405,33 +405,35 @@
             updateCarousel();
         }, 5000);
     }
-
+});
     // PENCARIAN BERITA BERFUNGSI
-    document.getElementById('searchInput').addEventListener('input', function() {
+    document.addEventListener('DOMContentLoaded', function () {
+    // Tambahkan event listener untuk input pencarian
+    document.getElementById('searchInput').addEventListener('input', function () {
         filterNews();
     });
 
     function filterNews() {
-        let query = document.getElementById('searchInput').value.toLowerCase();
-        let newsItems = document.querySelectorAll('.min-w-[300px]');
+        let query = document.getElementById('searchInput').value.toLowerCase(); // Ambil nilai input dan ubah ke huruf kecil
+        let newsItems = document.querySelectorAll('.news-item'); // Pilih semua berita dengan class .news-item
 
-        newsItems.forEach(function(item) {
-            let title = item.querySelector('h3').innerText.toLowerCase();
-            let description = item.querySelector('p').innerText.toLowerCase();
+        newsItems.forEach(function (item) {
+            let titleElement = item.querySelector('h3');
+            let descriptionElement = item.querySelector('p');
 
-            if (title.includes(query) || description.includes(query)) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
+            if (titleElement && descriptionElement) {
+                let title = titleElement.innerText.toLowerCase();
+                let description = descriptionElement.innerText.toLowerCase();
+
+                if (title.includes(query) || description.includes(query)) {
+                    item.style.display = 'flex'; // Pastikan ditampilkan (karena grid, gunakan flex)
+                } else {
+                    item.style.display = 'none'; // Sembunyikan jika tidak cocok
+                }
             }
         });
     }
 });
-
-
-
-
-
 
 
   function redirectToDetail(title, description, date, location, participants, image) {
