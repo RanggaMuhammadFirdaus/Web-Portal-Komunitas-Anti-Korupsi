@@ -309,6 +309,7 @@
     </div>
 </footer>
 
+
 <script>
    document.addEventListener("DOMContentLoaded", function () {
     let navbar = document.getElementById("navbar");
@@ -434,6 +435,14 @@
         });
     }
 });
+
+function redirectToDetailBerita(title, description, date, author, views, image) {
+    // Create a query string with URL parameters
+    const queryString = `?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&date=${encodeURIComponent(date)}&author=${encodeURIComponent(author)}&views=${encodeURIComponent(views)}&image=${encodeURIComponent(image)}`;
+    
+    // Redirect to detailberita.html with query parameters
+    window.location.href = "detailberita.html" + queryString;
+}
 
 
   function redirectToDetail(title, description, date, location, participants, image) {
