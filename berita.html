@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/76332dff60.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="detail.css">
+    <link rel="stylesheet" href="berita.css">
 </head>
 <body class="bg-[#04336c] font-[Poppins]">        
 
@@ -119,18 +119,18 @@
     <button id="login-button" class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold">Masuk</button>
 </div>
 
-<!-- Kegiatan Section -->
-<section id="kegiatan" class="bg-white py-16 text-gray-900">
+<!-- Berita Section -->
+<section id="berita" class="bg-white py-16 text-gray-900">
     <div class="container mx-auto text-center">
         <!-- Breadcrumb -->
         <nav class="text-gray-500 text-sm mb-6 mt-12 text-left">
             <a href="index.html" class="text-blue-600 hover:underline">Beranda</a> 
             <span class="mx-2">›</span> 
-            <span class="text-gray-700">Kegiatan</span>
+            <span class="text-gray-700">Berita</span>
         </nav>
        <!-- Kembali Button -->
         <div class="flex justify-start">
-            <a href="index.html#kegiatan" class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-gray-700 bg-blue 
+            <a href="index.html#berita" class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-gray-700 bg-blue 
                 hover:bg-[#6A0DAD] hover:text-white transition duration-300">
                 &larr; Kembali
             </a>
@@ -148,82 +148,83 @@
         </div>
 
         <div class="container mx-auto px-4 py-8">
-            <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+            <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6" id="newsContainer">
                 <!-- Activity 1 -->
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <img src="images/kegiatan1.PNG" alt="Seminar Transparansi Keuangan" class="rounded-lg w-full h-48 object-cover">
-                    <h3 class="font-semibold text-lg mt-3">Seminar Transparansi Keuangan</h3>
-                    <p class="text-sm text-gray-600 mt-2">Seminar yang membahas pentingnya transparansi keuangan dalam mengurangi risiko korupsi.</p>
+                <div class="news-item min-w-[300px] md:min-w-[400px] bg-gray-100 rounded-lg shadow-md snap-center p-6">
+                    <img src="images/berita1.png" alt="Konferensi Anti Korupsi" class="rounded-t-lg w-full h-48 object-cover">
+                    <h3 class="font-semibold text-lg">Kasus Korupsi meningkat di Sektor Pendidikan</h3>
+                    <p class="text-sm text-gray-600">Laporan terbaru mengungkap peningkatan signifikan kasus korupsi di sektor pendidikan selama tahun terakhir.</p>
                     <div class="mt-2 text-sm">
-                        📅 28 Februari 2024 <br>
-                        📍 Universitas Indonesia <br>
-                        👥 200 Peserta
+                        📅 10 Mei 2024 <br>
+                        📍 Ahmad Fauzi <br>
+                        👥 2,430 Peserta
                     </div>
-                    <button onclick="redirectToDetail('Seminar Transparansi Keuangan', 'Seminar yang membahas pentingnya transparansi keuangan dalam mengurangi risiko korupsi.', '28 Februari 2024', 'Universitas Indonesia', '200 Peserta', 'images/kegiatan1.PNG')" class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
-                        Lihat Detail
+                    <button onclick="redirectToDetailBerita('Kasus Korupsi meningkat di Sektor Pendidikan', 'Laporan terbaru mengungkap peningkatan signifikan kasus korupsi di sektor pendidikan selama tahun terakhir.', '10 Mei 2024', 'Ahmad Fauzi', '2,430 Melihat', 'images/berita1.png')" class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                        Baca Selengkapnya
                     </button>
                 </div>
-    
+
                 <!-- Activity 2 -->
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <img src="images/kegiatan2.PNG" alt="Forum Diskusi Kebijakan Publik" class="rounded-lg w-full h-48 object-cover">
-                    <h3 class="font-semibold text-lg mt-3">Forum Diskusi Kebijakan Publik</h3>
-                    <p class="text-sm text-gray-600 mt-2">Forum diskusi yang mengkaji kebijakan publik dari perspektif anti korupsi.</p>
+                <div class="news-item min-w-[300px] md:min-w-[400px] bg-gray-100 rounded-lg shadow-md snap-center p-6">
+                    <img src="images/berita2.png" alt="Konferensi Anti Korupsi" class="rounded-t-lg w-full h-48 object-cover">
+                    <h3 class="font-semibold text-lg">Inovasi Digital dalam Pengawasan Dana Publik</h3>
+                    <p class="text-sm text-gray-600">Platform digital baru dikembangkan untuk meningkatkan transparansi dan pengawasan dalam pengelolaan dana publik.</p>
                     <div class="mt-2 text-sm">
-                        📅 10 Maret 2024 <br>
-                        📍 Balai Kota Surabaya <br>
-                        👥 150 Peserta
+                        📅 23 April 2024 <br>
+                        📍 Dina Pratiwi <br>
+                        👥 1,826 Peserta
                     </div>
-                    <button onclick="redirectToDetail('Forum Diskusi Kebijakan Publik', 'Forum diskusi yang mengkaji kebijakan publik dari perspektif anti korupsi dan tata kelola yang baik.', '10 Maret 2024', 'Balai Kota Surabaya', '150 Peserta', 'images/kegiatan2.PNG')" class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
-                        Lihat Detail
+                    <button onclick="redirectToDetailBerita('Inovasi Digital dalam Pengawasan Dana Publik', 'Platform digital baru dikembangkan untuk meningkatkan transparansi dan pengawasan dalam pengelolaan dana publik.', '23 April 2024', 'Dina Pratiwi', '1,826 Melihat', 'images/berita2.png')" class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                        Baca Selengkapnya
                     </button>
                 </div>
-    
+
                 <!-- Activity 3 -->
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <img src="images/kegiatan3.PNG" alt="Forum Diskusi Kebijakan Publik Dunia" class="rounded-lg w-full h-48 object-cover">
-                    <h3 class="font-semibold text-lg mt-3">Forum Diskusi Kebijakan Publik Dunia</h3>
-                    <p class="text-sm text-gray-600 mt-2">Forum diskusi yang mengkaji kebijakan publik dari perspektif anti korupsi.</p>
+                <div class="news-item min-w-[300px] md:min-w-[400px] bg-gray-100 rounded-lg shadow-md snap-center p-6">
+                    <img src="images/berita3.jpg" alt="Konferensi Anti Korupsi" class="rounded-t-lg w-full h-48 object-cover">
+                    <h3 class="font-semibold text-lg">Gerakan Mahasiswa Anti Korupsi makin masif  </h3>
+                    <p class="text-sm text-gray-600">Gerakan mahasiswa anti korupsi semakin meluas dengan kampanye kreatif di berbagai kampus seluruh Indonesia.</p>
                     <div class="mt-2 text-sm">
-                        📅 10 Maret 2024 <br>
-                        📍 Balai Kota Surabaya <br>
-                        👥 150 Peserta
+                        📅 07 Maret 2024 <br>
+                        📍 Budi Santoso <br>
+                        👥 3,102 Peserta
                     </div>
-                    <button onclick="redirectToDetail('Forum Diskusi Kebijakan Publik Dunia', 'Forum diskusi yang mengkaji kebijakan publik dari perspektif anti korupsi dan tata kelola yang baik.', '10 Maret 2024', 'Balai Kota Surabaya', '150 Peserta', 'images/kegiatan3.PNG')" class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
-                        Lihat Detail
+                    <button onclick="redirectToDetailBerita('Gerakan Mahasiswa Anti Korupsi makin masif', 'Gerakan mahasiswa anti korupsi semakin meluas dengan kampanye kreatif di berbagai kampus seluruh Indonesia.', '07 Maret 2024', 'Budi Santoso', '3,102 Melihat', 'images/berita3.jpg')" class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                        Baca Selengkapnya
                     </button>
                 </div>
-    
+
                 <!-- Activity 4 -->
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <img src="images/kegiatan4.PNG" alt="Forum Diskusi Kebijakan Publik Masyarakat" class="rounded-lg w-full h-48 object-cover">
-                    <h3 class="font-semibold text-lg mt-3">Forum Diskusi Kebijakan Publik Masyarakat</h3>
-                    <p class="text-sm text-gray-600 mt-2">Forum diskusi yang mengkaji kebijakan publik dari perspektif anti korupsi.</p>
+                <div class="news-item min-w-[300px] md:min-w-[400px] bg-gray-100 rounded-lg shadow-md snap-center p-6">
+                    <img src="images/berita4.png" alt="Konferensi Anti Korupsi" class="rounded-t-lg w-full h-48 object-cover">
+                    <h3 class="font-semibold text-lg">Studi Kasus: Keberhasilan Reformasi anti Korupsi di Daerah</h3>
+                    <p class="text-sm text-gray-600">Beberapa daerah di Indonesia berhasil menurunkan tingkat korupsi secara signifikan melalui berbagai reformasi sistem.</p>
                     <div class="mt-2 text-sm">
-                        📅 10 Maret 2024 <br>
-                        📍 Balai Kota Surabaya <br>
-                        👥 150 Peserta
+                        📅 15 Februari 2024 <br>
+                        📍 Ratna Wijaya <br>
+                        👥 1,542 Peserta
                     </div>
-                    <button onclick="redirectToDetail('Forum Diskusi Kebijakan Publik Masyarakat', 'Forum diskusi yang mengkaji kebijakan publik dari perspektif anti korupsi dan tata kelola yang baik.', '10 Maret 2024', 'Balai Kota Surabaya', '150 Peserta', 'images/kegiatan4.PNG')" class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
-                        Lihat Detail
+                    <button onclick="redirectToDetailBerita('Studi Kasus: Keberhasilan Reformasi anti Korupsi di Daerah', 'Beberapa daerah di Indonesia berhasil menurunkan tingkat korupsi secara signifikan melalui berbagai reformasi sistem.', '15 Februari 2024', 'Ratna Wijaya', '150 Peserta', 'images/berita4.png')" class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                        Baca Selengkapnya
                     </button>
                 </div>
-    
+
                 <!-- Activity 5 -->
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <img src="images/kegiatan1.PNG" alt="Pelatihan Audit Investigasi" class="rounded-lg w-full h-48 object-cover">
-                    <h3 class="font-semibold text-lg mt-3">Pelatihan Audit Investigasi</h3>
-                    <p class="text-sm text-gray-600 mt-2">Pelatihan khusus tentang teknik audit investigasi untuk mengungkap kasus-kasus korupsi.</p>
+                <div class="news-item min-w-[300px] md:min-w-[400px] bg-gray-100 rounded-lg shadow-md snap-center p-6">
+                    <img src="images/berita5.png" alt="Konferensi Anti Korupsi" class="rounded-t-lg w-full h-48 object-cover">
+                    <h3 class="font-semibold text-lg">Peran Teknologi AI dalam mendeteksi Potensi Korupsi</h3>
+                    <p class="text-sm text-gray-600">Sistem berbasis kecerdasan buatan kini dikembangkan untuk mendeteksi pola-pola mencurigakan dalam transaksi keuangan pemerintah.</p>
                     <div class="mt-2 text-sm">
-                        📅 5 April 2024 <br>
-                        📍 Hotel Mulia Jakarta <br>
-                        👥 80 Peserta
+                        📅 08 Januari 2024 <br>
+                        📍 Adi Nugroho <br>
+                        👥 4,287 Peserta
                     </div>
-                    <button onclick="redirectToDetail('Pelatihan Audit Investigasi', 'Pelatihan khusus tentang teknik audit investigasi untuk mengungkap kasus-kasus korupsi.', '5 April 2024', 'Hotel Mulia Jakarta', '80 Peserta', 'images/kegiatan1.PNG')" class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
-                        Lihat Detail
+                    <button onclick="redirectToDetailBerita('Peran Teknologi AI dalam mendeteksi Potensi Korupsi', 'Sistem berbasis kecerdasan buatan kini dikembangkan untuk mendeteksi pola-pola mencurigakan dalam transaksi keuangan pemerintah.', '08 Januari 2024', 'Adi Nugroho', '4,287 Melihat', 'images/berita5.png')" class="mt-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                        Baca Selengkapnya
                     </button>
                 </div>
             </div>
+            
         </div>
 </section>
 
@@ -309,143 +310,126 @@
 </footer>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-  let navbar = document.getElementById("navbar");
-  let menuToggle = document.getElementById("menu-toggle");
-  let mobileMenu = document.getElementById("mobile-menu");
-  let closeMenu = document.getElementById("close-menu");
-  let menuLinks = document.querySelectorAll("#mobile-menu a");
-  let toggleMenus = document.querySelectorAll(".toggle-menu");
+   document.addEventListener("DOMContentLoaded", function () {
+    let navbar = document.getElementById("navbar");
+    let menuToggle = document.getElementById("menu-toggle");
+    let mobileMenu = document.getElementById("mobile-menu");
+    let closeMenu = document.getElementById("close-menu");
+    let menuLinks = document.querySelectorAll("#mobile-menu a");
+    let toggleMenus = document.querySelectorAll(".toggle-menu");
 
-  // Efek navbar berubah warna saat scroll (TIDAK DIUBAH)
-  window.addEventListener("scroll", function () {
-      if (window.scrollY > 10) {
-          navbar.classList.add("nav-scrolled");
-      } else {
-          navbar.classList.remove("nav-scrolled");
-      }
-  });
-
-  // Toggle mobile menu saat tombol hamburger ditekan
-  if (menuToggle) {
-      menuToggle.addEventListener("click", function () {
-          mobileMenu.classList.toggle("active");
-      });
-  }
-
-  // Tutup menu mobile saat tombol close ditekan
-  if (closeMenu) {
-      closeMenu.addEventListener("click", function () {
-          mobileMenu.classList.remove("active");
-      });
-  }
-
-  // Tutup menu mobile jika salah satu item menu diklik
-  menuLinks.forEach(item => {
-      item.addEventListener("click", function () {
-          mobileMenu.classList.remove("active");
-      });
-  });
-
-  // Toggle submenu saat menu diklik
-  toggleMenus.forEach(menu => {
-      menu.addEventListener("click", function (event) {
-          event.preventDefault();
-          const menuId = menu.getAttribute("data-menu");
-          const submenu = document.getElementById(menuId);
-          
-          if (submenu) {
-              const isHidden = submenu.classList.contains("hidden");
-
-              // Tutup semua submenu lain sebelum membuka yang baru
-              document.querySelectorAll(".submenu").forEach(item => {
-                  item.classList.add("hidden");
-              });
-
-              // Tampilkan submenu yang dipilih
-              if (isHidden) {
-                  submenu.classList.remove("hidden");
-              }
-          }
-      });
-  });
-
-  
-      // Toggle Submenus in Mobile
-      document.querySelectorAll('.mobile-toggle').forEach((toggle) => {
-          toggle.addEventListener("click", function () {
-              let submenu = this.nextElementSibling;
-              submenu.classList.toggle("hidden");
-              let icon = this.querySelector("svg");
-              icon.classList.toggle("rotate-180");
-          });
-      });
-
-  // Tutup submenu jika klik di luar area menu
-  document.addEventListener("click", function (event) {
-      if (!event.target.closest(".relative")) {
-          document.querySelectorAll(".submenu").forEach(menu => {
-              menu.classList.add("hidden");
-          });
-      }
-  });
-
-  // Fungsi carousel (slider otomatis)
-  const carouselItems = document.getElementById("carouselItems");
-  if (carouselItems) {
-      let index = 0;
-      const totalItems = carouselItems.children.length;
-
-      function updateCarousel() {
-          carouselItems.style.transform = `translateX(-${index * 100}%)`;
-      }
-
-      setInterval(() => {
-          index = (index + 1) % totalItems;
-          updateCarousel();
-      }, 5000);
-  }
-});
-
-document.getElementById('searchInput').addEventListener('input', function() {
-    let filter = this.value.toLowerCase();
-    let items = document.querySelectorAll('.bg-white.rounded-lg.shadow-md.p-6');
-
-    // Jika input kosong, tampilkan semua kegiatan
-    if (filter === '') {
-        items.forEach(item => {
-            item.style.display = 'block';
-            item.style.opacity = '1';
-        });
-        return;
-    }
-
-    let matchingItems = [];
-
-    items.forEach(item => {
-        let title = item.querySelector('h3').textContent.toLowerCase();
-        
-        // Cek apakah judul mengandung teks input
-        if (title.includes(filter)) {
-            matchingItems.push(item);
-            item.style.display = 'block';
-            item.style.opacity = '1';
+    // Efek navbar berubah warna saat scroll
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 10) {
+            navbar.classList.add("nav-scrolled");
         } else {
-            item.style.display = 'none';
-            item.style.opacity = '0';
+            navbar.classList.remove("nav-scrolled");
         }
     });
 
-    // Jika hanya satu kegiatan yang cocok, sembunyikan lainnya
-    if (matchingItems.length === 1) {
-        items.forEach(item => {
-            if (!matchingItems.includes(item)) {
+    // Toggle mobile menu saat tombol hamburger ditekan
+    if (menuToggle) {
+        menuToggle.addEventListener("click", function () {
+            mobileMenu.classList.toggle("active");
+        });
+    }
+
+    // Tutup menu mobile saat tombol close ditekan
+    if (closeMenu) {
+        closeMenu.addEventListener("click", function () {
+            mobileMenu.classList.remove("active");
+        });
+    }
+
+    // Tutup menu mobile jika salah satu item menu diklik
+    menuLinks.forEach(item => {
+        item.addEventListener("click", function () {
+            mobileMenu.classList.remove("active");
+        });
+    });
+
+    // Toggle submenu saat menu diklik
+    toggleMenus.forEach(menu => {
+        menu.addEventListener("click", function (event) {
+            event.preventDefault();
+            const menuId = menu.getAttribute("data-menu");
+            const submenu = document.getElementById(menuId);
+
+            if (submenu) {
+                const isHidden = submenu.classList.contains("hidden");
+
+                // Tutup semua submenu lain sebelum membuka yang baru
+                document.querySelectorAll(".submenu").forEach(item => {
+                    item.classList.add("hidden");
+                });
+
+                // Tampilkan submenu yang dipilih
+                if (isHidden) {
+                    submenu.classList.remove("hidden");
+                }
+            }
+        });
+    });
+
+    // Toggle Submenus in Mobile
+    document.querySelectorAll('.mobile-toggle').forEach((toggle) => {
+        toggle.addEventListener("click", function () {
+            let submenu = this.nextElementSibling;
+            submenu.classList.toggle("hidden");
+            let icon = this.querySelector("svg");
+            icon.classList.toggle("rotate-180");
+        });
+    });
+
+    // Tutup submenu jika klik di luar area menu
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".relative")) {
+            document.querySelectorAll(".submenu").forEach(menu => {
+                menu.classList.add("hidden");
+            });
+        }
+    });
+
+    // Fungsi carousel (slider otomatis)
+    const carouselItems = document.getElementById("carouselItems");
+    if (carouselItems) {
+        let index = 0;
+        const totalItems = carouselItems.children.length;
+
+        function updateCarousel() {
+            carouselItems.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        setInterval(() => {
+            index = (index + 1) % totalItems;
+            updateCarousel();
+        }, 5000);
+    }
+
+    // PENCARIAN BERITA BERFUNGSI
+    document.getElementById('searchInput').addEventListener('input', function() {
+        filterNews();
+    });
+
+    function filterNews() {
+        let query = document.getElementById('searchInput').value.toLowerCase();
+        let newsItems = document.querySelectorAll('.min-w-[300px]');
+
+        newsItems.forEach(function(item) {
+            let title = item.querySelector('h3').innerText.toLowerCase();
+            let description = item.querySelector('p').innerText.toLowerCase();
+
+            if (title.includes(query) || description.includes(query)) {
+                item.style.display = 'block';
+            } else {
                 item.style.display = 'none';
-                item.style.opacity = '0';
             }
         });
     }
 });
+
+
+
 
 
 

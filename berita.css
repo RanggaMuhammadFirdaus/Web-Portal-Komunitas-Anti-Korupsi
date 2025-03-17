@@ -1,0 +1,199 @@
+/* ============================= */
+/*        NAVBAR STYLING         */
+/* ============================= */
+body, html {
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+/* Default navbar styles */
+#navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Hover effect for underline */
+.nav-item:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================= */
+/*        MOBILE NAVBAR          */
+/* ============================= */
+
+/* Mobile Menu */
+#mobile-menu {
+    background-color: rgba(4, 25, 56, 0.99);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    display: none;
+    z-index: 10000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* Menampilkan menu saat aktif */
+#mobile-menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Menyesuaikan teks di mobile menu */
+#mobile-menu ul {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
+
+#mobile-menu ul li a {
+    display: block;
+    padding: 15px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Pastikan tombol login di menu mobile full width */
+#mobile-menu button {
+    width: 90%;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.2rem;
+}
+
+/* Tombol Close Menu */
+#close-menu {
+    position: absolute;
+    top: 20px;
+    left: 180px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#close-menu:hover {
+    color: #ffcc00;
+}
+
+/* ============================= */
+/*        RESPONSIVE NAVBAR      */
+/* ============================= */
+
+@media (max-width: 1024px) {
+    .nav-items {
+        display: none;
+    }
+
+    #menu-toggle {
+        display: none !important;
+    }
+}
+
+/* Sembunyikan hamburger button di desktop */
+@media (min-width: 1025px) {
+    .nav-items {
+        display: flex !important;
+    }
+
+    #menu-toggle {
+        display: none !important;
+    }
+}
+
+/* ============================= */
+/*        GRID BERITA            */
+/* ============================= */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: o auto;
+}
+
+/* Responsive untuk tablet (2 kolom) */
+@media (max-width: 1024px) {
+    .news-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Responsive untuk mobile (1 kolom) */
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+#toggle-menu {  
+    display: none !important;  /* Sembunyikan toggle menu */
+}
+
+
+/* ============================= */
+/*        FOOTER RESPONSIF       */
+/* ============================= */
+
+footer {
+    min-height: 220px;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer .column {
+    flex: 1;
+    min-width: 180px;
+    margin-bottom: 15px;
+}
+
+/* Footer lebih responsif di iPad Air */
+@media (max-width: 820px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    footer .column {
+        width: 100%;
+    }
+}
+
+/* Footer lebih rapi di iPad Mini */
+@media (max-width: 768px) {
+    footer {
+        padding: 35px 15px;
+    }
+
+    footer .column {
+        min-width: 160px;
+        text-align: center;
+    }
+}
