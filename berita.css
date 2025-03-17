@@ -1,3 +1,7 @@
+.container{
+  overflow: hidden;
+}
+
 /* Navbar Styling */
 #navbar {
   background-color: transparent;
