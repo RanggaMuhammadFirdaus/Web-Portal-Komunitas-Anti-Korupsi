@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
       body {
         font-family: "Poppins", sans-serif;
@@ -132,70 +133,37 @@
           </ul>
 
           <!-- Hamburger Menu for Mobile -->
-          <button id="menu-toggle" class="text-[#6A0DAD] text-2xl md:hidden">
+          <button id="menu-toggle" class="text-[#6A0DAD] text-2xl ">
             <i class="fas fa-bars"></i>
           </button>
         </div>
       </nav>
 
       <!-- Mobile Menu -->
-      <div
-        id="mobile-menu"
-        class="hidden fixed inset-0 bg-[#04336c] text-white flex flex-col items-center justify-center z-50 p-4"
-      >
-        <!-- Close Button -->
-        <button
-          id="close-menu"
-          class="absolute top-5 right-5 text-white text-3xl font-bold"
-        >
-          &times;
-        </button>
+      <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-[#04336c] text-white flex flex-col items-center justify-center z-50 p-4">
+        
+      <!-- Close Button -->
+      <button id="close-menu" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
 
-        <!-- Mobile Menu List -->
-        <ul class="text-center space-y-6 text-lg font-semibold w-full">
+      <!-- Mobile Menu List -->
+      <ul class="text-center space-y-6 text-lg font-semibold w-full">
           <li><a href="#" class="block">Beranda</a></li>
           <li><a href="#about" class="block">Tentang</a></li>
 
           <!-- Fitur Dropdown -->
           <li>
-            <button
-              class="mobile-toggle flex items-center justify-center w-full"
-            >
-              <span>Fitur</span>
-              <svg
-                class="w-4 h-4 ml-1 transition-transform transform"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
-              </svg>
-            </button>
-            <ul
-              class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2"
-            >
-              <li>
-                <a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200"
-                  >Fitur 1</a
-                >
-              </li>
-              <li>
-                <a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200"
-                  >Fitur 2</a
-                >
-              </li>
-              <li>
-                <a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200"
-                  >Fitur 3</a
-                >
-              </li>
-            </ul>
+              <button class="mobile-toggle flex items-center justify-center w-full">
+                  <span>Fitur</span>
+                  <svg class="w-4 h-4 ml-1 transition-transform transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+              </button>
+              <ul class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2">
+                  <li><a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200">Fitur 1</a></li>
+                  <li><a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200">Fitur 2</a></li>
+                  <li><a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200">Fitur 3</a></li>
+              </ul>
           </li>
 
           <li><a href="#dampak" class="block">Dampak</a></li>
@@ -203,45 +171,21 @@
 
           <!-- Bergabung Dropdown -->
           <li>
-            <button
-              class="mobile-toggle flex items-center justify-center w-full"
-            >
-              <span>Bergabung</span>
-              <svg
-                class="w-4 h-4 ml-1 transition-transform transform"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
-              </svg>
-            </button>
-            <ul
-              class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2"
-            >
-              <li>
-                <a href="#daftar" class="block px-4 py-2 hover:bg-gray-200"
-                  >Daftar</a
-                >
-              </li>
-            </ul>
+              <button class="mobile-toggle flex items-center justify-center w-full">
+                  <span>Bergabung</span>
+                  <svg class="w-4 h-4 ml-1 transition-transform transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+              </button>
+              <ul class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2">
+                  <li><a href="#daftar" class="block px-4 py-2 hover:bg-gray-200">Daftar</a></li>
+              </ul>
           </li>
-        </ul>
+      </ul>
 
-        <!-- Login Button -->
-        <button
-          id="login-button"
-          class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold"
-        >
-          Masuk
-        </button>
-      </div>
+      <!-- Login Button -->
+      <button id="login-button" class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold">Masuk</button>
+  </div>
     </header>
 
     <!-- Konten Artikel -->
@@ -442,77 +386,78 @@
         let closeMenu = document.getElementById("close-menu");
         let menuLinks = document.querySelectorAll("#mobile-menu a");
         let toggleMenus = document.querySelectorAll(".toggle-menu");
-
+    
         // Efek navbar berubah warna saat scroll (TIDAK DIUBAH)
         window.addEventListener("scroll", function () {
-          if (window.scrollY > 10) {
-            navbar.classList.add("nav-scrolled");
-          } else {
-            navbar.classList.remove("nav-scrolled");
-          }
+            if (window.scrollY > 10) {
+                navbar.classList.add("nav-scrolled");
+            } else {
+                navbar.classList.remove("nav-scrolled");
+            }
         });
-
+    
         // Toggle mobile menu saat tombol hamburger ditekan
         if (menuToggle) {
-          menuToggle.addEventListener("click", function () {
-            mobileMenu.classList.toggle("active");
-          });
+            menuToggle.addEventListener("click", function () {
+                mobileMenu.classList.toggle("active");
+            });
         }
-
+    
         // Tutup menu mobile saat tombol close ditekan
         if (closeMenu) {
-          closeMenu.addEventListener("click", function () {
-            mobileMenu.classList.remove("active");
-          });
+            closeMenu.addEventListener("click", function () {
+                mobileMenu.classList.remove("active");
+            });
         }
-
+    
         // Tutup menu mobile jika salah satu item menu diklik
-        menuLinks.forEach((item) => {
-          item.addEventListener("click", function () {
-            mobileMenu.classList.remove("active");
-          });
+        menuLinks.forEach(item => {
+            item.addEventListener("click", function () {
+                mobileMenu.classList.remove("active");
+            });
         });
-
+    
         // Toggle submenu saat menu diklik
-        toggleMenus.forEach((menu) => {
-          menu.addEventListener("click", function (event) {
-            event.preventDefault();
-            const menuId = menu.getAttribute("data-menu");
-            const submenu = document.getElementById(menuId);
-
-            if (submenu) {
-              const isHidden = submenu.classList.contains("hidden");
-
-              // Tutup semua submenu lain sebelum membuka yang baru
-              document.querySelectorAll(".submenu").forEach((item) => {
-                item.classList.add("hidden");
-              });
-
-              // Tampilkan submenu yang dipilih
-              if (isHidden) {
-                submenu.classList.remove("hidden");
-              }
-            }
-          });
+        toggleMenus.forEach(menu => {
+            menu.addEventListener("click", function (event) {
+                event.preventDefault();
+                const menuId = menu.getAttribute("data-menu");
+                const submenu = document.getElementById(menuId);
+                
+                if (submenu) {
+                    const isHidden = submenu.classList.contains("hidden");
+    
+                    // Tutup semua submenu lain sebelum membuka yang baru
+                    document.querySelectorAll(".submenu").forEach(item => {
+                        item.classList.add("hidden");
+                    });
+    
+                    // Tampilkan submenu yang dipilih
+                    if (isHidden) {
+                        submenu.classList.remove("hidden");
+                    }
+                }
+            });
         });
-
-        // Toggle Submenus in Mobile
-        document.querySelectorAll(".mobile-toggle").forEach((toggle) => {
-          toggle.addEventListener("click", function () {
-            let submenu = this.nextElementSibling;
-            submenu.classList.toggle("hidden");
-            let icon = this.querySelector("svg");
-            icon.classList.toggle("rotate-180");
-          });
-        });
-
+    
+        
+            // Toggle Submenus in Mobile
+            document.querySelectorAll('.mobile-toggle').forEach((toggle) => {
+                toggle.addEventListener("click", function () {
+                    let submenu = this.nextElementSibling;
+                    submenu.classList.toggle("hidden");
+                    let icon = this.querySelector("svg");
+                    icon.classList.toggle("rotate-180");
+                });
+            });
+    
         // Tutup submenu jika klik di luar area menu
         document.addEventListener("click", function (event) {
-          if (!event.target.closest(".relative")) {
-            document.querySelectorAll(".submenu").forEach((menu) => {
-              menu.classList.add("hidden");
-            });
-          }
+            if (!event.target.closest(".relative")) {
+                document.querySelectorAll(".submenu").forEach(menu => {
+                    menu.classList.add("hidden");
+                });
+            }
         });
 
         // Fungsi carousel (slider otomatis)
