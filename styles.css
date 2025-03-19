@@ -48,6 +48,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.wider-submenu {
+  width: 250px; /* Adjust the width as needed */
+}
+
 /* Scroll down icon animation */
 .scroll-down {
   display: inline-block;

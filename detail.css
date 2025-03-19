@@ -6,6 +6,19 @@
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
+  background-color: white !important;
+}
+.wider-submenu {
+  width: 250px; /* Adjust the width as needed */
+}
+
+.nav-item{
+  color: #00296b !important;
+  font-weight: 600;
+}
+
+#navbar-title{
+  color: #00296b !important;
 }
 
 /* Hover effect for underline */
