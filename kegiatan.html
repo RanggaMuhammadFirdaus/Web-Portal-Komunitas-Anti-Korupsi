@@ -12,7 +12,7 @@
 </head>
 <body class="bg-[#04336c] font-[Poppins]">        
 
-         <!-- Navbar -->
+     <!-- Navbar -->
     <nav
     id="navbar"
     class="fixed top-0 left-0 w-full z-50 p-4 bg-[#04336c] transition duration-300"
@@ -110,10 +110,10 @@
           </a>
           <ul
             id="join-menu"
-            class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg wider-submenu"
+            class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg"
           >
             <li>
-              <a href="#daftar" class="block px-4 py-2 hover:bg-gray-200"
+              <a href="#daftar" class="block px-4 py-2 hover:bg-gray-200 wider-submenu"
                 >Daftar</a
               >
             </li>
@@ -131,58 +131,112 @@
       </ul>
 
       <!-- Menu Toggle Button (Hamburger) for Mobile -->
-      <button id="menu-toggle" class="text-white text-2xl md:hidden">
+      <button id="menu-toggle" class="text-[#6a0dad] text-2xl md:hidden">
         <i class="fas fa-bars"></i>
       </button>
     </div>
   </nav>
 
-         <!-- Mobile Menu -->
-<div id="mobile-menu" class="hidden fixed inset-0 bg-[#04336c] text-white flex flex-col items-center justify-center z-50 p-4">
-    
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden fixed inset-0 bg-[#04336c] text-white flex flex-col items-center justify-center z-50 p-4"
+  >
     <!-- Close Button -->
-    <button id="close-menu" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+    <button
+      id="close-menu"
+      class="absolute top-5 right-5 text-white text-3xl font-bold"
+    >
+      &times;
+    </button>
 
     <!-- Mobile Menu List -->
     <ul class="text-center space-y-6 text-lg font-semibold w-full">
-        <li><a href="#" class="block">Beranda</a></li>
-        <li><a href="#about" class="block">Tentang</a></li>
+      <li><a href="#" class="block">Beranda</a></li>
+      <li><a href="#about" class="block">Tentang</a></li>
 
-        <!-- Fitur Dropdown -->
-        <li>
-            <button class="mobile-toggle flex items-center justify-center w-full">
-                <span>Fitur</span>
-                <svg class="w-4 h-4 ml-1 transition-transform transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-            </button>
-            <ul class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2">
-                <li><a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200">Fitur 1</a></li>
-                <li><a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200">Fitur 2</a></li>
-                <li><a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200">Fitur 3</a></li>
-            </ul>
-        </li>
+      <!-- Fitur Dropdown -->
+      <li>
+        <button class="mobile-toggle flex items-center justify-center w-full">
+          <span>Fitur</span>
+          <svg
+            class="w-4 h-4 ml-1 transition-transform transform"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2"
+        >
+          <li>
+            <a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200"
+              >Fitur 1</a
+            >
+          </li>
+          <li>
+            <a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200"
+              >Fitur 2</a
+            >
+          </li>
+          <li>
+            <a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200"
+              >Fitur 3</a
+            >
+          </li>
+        </ul>
+      </li>
 
-        <li><a href="#dampak" class="block">Dampak</a></li>
-        <li><a href="#kegiatan" class="block">Kegiatan</a></li>
+      <li><a href="#dampak" class="block">Dampak</a></li>
+      <li><a href="#kegiatan" class="block">Kegiatan</a></li>
 
-        <!-- Bergabung Dropdown -->
-        <li>
-            <button class="mobile-toggle flex items-center justify-center w-full">
-                <span>Bergabung</span>
-                <svg class="w-4 h-4 ml-1 transition-transform transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-            </button>
-            <ul class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2">
-                <li><a href="#daftar" class="block px-4 py-2 hover:bg-gray-200">Daftar</a></li>
-            </ul>
-        </li>
+      <!-- Bergabung Dropdown -->
+      <li>
+        <button class="mobile-toggle flex items-center justify-center w-full">
+          <span>Bergabung</span>
+          <svg
+            class="w-4 h-4 ml-1 transition-transform transform"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2"
+        >
+          <li>
+            <a href="#daftar" class="block px-4 py-2 hover:bg-gray-200"
+              >Daftar</a
+            >
+          </li>
+        </ul>
+      </li>
     </ul>
 
     <!-- Login Button -->
-    <button id="login-button" class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold">Masuk</button>
-</div>
+    <button
+      id="login-button"
+      class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold"
+    >
+      Masuk
+    </button>
+  </div>
 
 <!-- Kegiatan Section -->
 <section id="kegiatan" class="bg-white py-16 text-gray-900">
