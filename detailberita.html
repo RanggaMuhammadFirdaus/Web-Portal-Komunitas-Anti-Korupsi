@@ -41,151 +41,214 @@
             >
           </a>
 
-          <!-- Navbar Menu (Desktop) -->
-          <ul
-            id="nav-items"
-            class="hidden md:flex space-x-4 text-blue-500 ml-4 items-center"
+         <!-- Navbar Menu -->
+        <ul
+        id="nav-items"
+        class="hidden lg:flex space-x-6 text-[#00296b] ml-2 items-center"
+      >
+        <li><a href="#" class="nav-item">Beranda</a></li>
+        <li><a href="#about" class="nav-item">Tentang</a></li>
+
+        <!-- Platform with Submenu -->
+        <li class="relative">
+          <a
+            href="#"
+            class="nav-item toggle-menu flex items-center space-x-6"
+            data-menu="platform-menu"
           >
-            <li><a href="#" class="nav-item">Beranda</a></li>
-            <li><a href="#about" class="nav-item">Tentang</a></li>
-
-            <!-- Fitur Dropdown -->
-            <li class="relative group">
-              <a href="#" class="nav-item flex items-center space-x-1">
-                <span>Fitur</span>
-                <svg
-                  class="w-4 h-4 transition-transform duration-300 ease-in-out"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                  ></path>
-                </svg>
-              </a>
-              <ul
-                class="hidden absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md group-hover:block"
-              >
-                <li>
-                  <a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200"
-                    >Fitur 1</a
-                  >
-                </li>
-                <li>
-                  <a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200"
-                    >Fitur 2</a
-                  >
-                </li>
-                <li>
-                  <a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200"
-                    >Fitur 3</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-            <li><a href="#dampak" class="nav-item">Dampak</a></li>
-            <li><a href="#kegiatan" class="nav-item">Kegiatan</a></li>
-
-            <!-- Bergabung Dropdown -->
-            <li class="relative group">
-              <a href="#" class="nav-item flex items-center space-x-1">
-                <span>Bergabung</span>
-                <svg
-                  class="w-4 h-4 transition-transform duration-300 ease-in-out"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                  ></path>
-                </svg>
-              </a>
-              <ul
-                class="hidden absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md group-hover:block"
-              >
-                <li>
-                  <a href="#daftar" class="block px-4 py-2 hover:bg-gray-200"
-                    >Daftar</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-            <!-- Login Button -->
+            <span>Fitur</span>
+            <svg
+              class="w-4 h-4 transition-transform duration-300 ease-in-out"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </a>
+          <ul
+            id="platform-menu"
+            class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg wider-submenu"
+          >
             <li>
-              <a
-                href="#"
-                class="bg-[#176BFF] text-white px-4 py-2 rounded-md font-semibold"
-                >Masuk</a
+              <a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200"
+                >Fitur 1</a
+              >
+            </li>
+            <li>
+              <a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200"
+                >Fitur 2</a
+              >
+            </li>
+            <li>
+              <a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200"
+                >Fitur 3</a
               >
             </li>
           </ul>
+        </li>
 
-          <!-- Hamburger Menu for Mobile -->
-          <button id="menu-toggle" class="text-[#6A0DAD] text-2xl ">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
-      </nav>
+        <li><a href="#dampak" class="nav-item">Dampak</a></li>
+        <li><a href="#kegiatan" class="nav-item">Kegiatan</a></li>
 
-      <!-- Mobile Menu -->
-      <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden fixed inset-0 bg-[#04336c] text-white flex flex-col items-center justify-center z-50 p-4">
-        
-      <!-- Close Button -->
-      <button id="close-menu" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+        <!-- Bergabung with Submenu -->
+        <li class="relative">
+          <a
+            href="#"
+            class="nav-item toggle-menu flex items-center space-x-1"
+            data-menu="join-menu"
+          >
+            <span>Bergabung</span>
+            <svg
+              class="w-4 h-4 transition-transform duration-300 ease-in-out"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </a>
+          <ul
+            id="join-menu"
+            class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg wider-submenu"
+          >
+            <li>
+              <a href="#daftar" class="block px-4 py-2 hover:bg-gray-200 wider-submenu"
+                >Daftar</a
+              >
+            </li>
+          </ul>
+        </li>
 
-      <!-- Mobile Menu List -->
-      <ul class="text-center space-y-6 text-lg font-semibold w-full">
-          <li><a href="#" class="block">Beranda</a></li>
-          <li><a href="#about" class="block">Tentang</a></li>
-
-          <!-- Fitur Dropdown -->
-          <li>
-              <button class="mobile-toggle flex items-center justify-center w-full">
-                  <span>Fitur</span>
-                  <svg class="w-4 h-4 ml-1 transition-transform transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-              </button>
-              <ul class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2">
-                  <li><a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200">Fitur 1</a></li>
-                  <li><a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200">Fitur 2</a></li>
-                  <li><a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200">Fitur 3</a></li>
-              </ul>
-          </li>
-
-          <li><a href="#dampak" class="block">Dampak</a></li>
-          <li><a href="#kegiatan" class="block">Kegiatan</a></li>
-
-          <!-- Bergabung Dropdown -->
-          <li>
-              <button class="mobile-toggle flex items-center justify-center w-full">
-                  <span>Bergabung</span>
-                  <svg class="w-4 h-4 ml-1 transition-transform transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-              </button>
-              <ul class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2">
-                  <li><a href="#daftar" class="block px-4 py-2 hover:bg-gray-200">Daftar</a></li>
-              </ul>
-          </li>
+        <!-- Login Button -->
+        <li>
+          <a
+            href="#"
+            class="bg-[#176BFF] text-white px-3 py-2 rounded-md font-semibold hidden md:flex items-center"
+            >Masuk</a
+          >
+        </li>
       </ul>
 
-      <!-- Login Button -->
-      <button id="login-button" class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold">Masuk</button>
-  </div>
+      <!-- Menu Toggle Button (Hamburger) for Mobile -->
+      <button id="menu-toggle" class="text-[#00296b] text-2xl lg:hidden">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+   <!-- Mobile Menu -->
+   <div
+   id="mobile-menu"
+   class="hidden fixed inset-0 bg-[#04336c] text-white flex flex-col items-center justify-center z-50 p-4"
+ >
+   <!-- Close Button -->
+   <button
+     id="close-menu"
+     class="absolute top-5 right-5 text-white text-3xl font-bold"
+   >
+     &times;
+   </button>
+
+   <!-- Mobile Menu List -->
+   <ul class="text-center space-y-6 text-lg font-semibold w-full">
+     <li><a href="#" class="block">Beranda</a></li>
+     <li><a href="#about" class="block">Tentang</a></li>
+
+     <!-- Fitur Dropdown -->
+     <li>
+       <button class="mobile-toggle flex items-center justify-center w-full">
+         <span>Fitur</span>
+         <svg
+           class="w-4 h-4 ml-1 transition-transform transform"
+           xmlns="http://www.w3.org/2000/svg"
+           fill="none"
+           viewBox="0 0 24 24"
+           stroke="currentColor"
+         >
+           <path
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             stroke-width="2"
+             d="M19 9l-7 7-7-7"
+           ></path>
+         </svg>
+       </button>
+       <ul
+         class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2"
+       >
+         <li>
+           <a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200"
+             >Fitur 1</a
+           >
+         </li>
+         <li>
+           <a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200"
+             >Fitur 2</a
+           >
+         </li>
+         <li>
+           <a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200"
+             >Fitur 3</a
+           >
+         </li>
+       </ul>
+     </li>
+
+     <li><a href="#dampak" class="block">Dampak</a></li>
+     <li><a href="#kegiatan" class="block">Kegiatan</a></li>
+
+     <!-- Bergabung Dropdown -->
+     <li>
+       <button class="mobile-toggle flex items-center justify-center w-full">
+         <span>Bergabung</span>
+         <svg
+           class="w-4 h-4 ml-1 transition-transform transform"
+           xmlns="http://www.w3.org/2000/svg"
+           fill="none"
+           viewBox="0 0 24 24"
+           stroke="currentColor"
+         >
+           <path
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             stroke-width="2"
+             d="M19 9l-7 7-7-7"
+           ></path>
+         </svg>
+       </button>
+       <ul
+         class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2"
+       >
+         <li>
+           <a href="#daftar" class="block px-4 py-2 hover:bg-gray-200"
+             >Daftar</a
+           >
+         </li>
+       </ul>
+     </li>
+   </ul>
+
+   <!-- Login Button -->
+   <button
+     id="login-button"
+     class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold"
+   >
+     Masuk
+   </button>
+ </div>
     </header>
 
     <!-- Konten Artikel -->

@@ -23,7 +23,7 @@
                 </a>
                 
                 <!-- Navbar Menu -->
-                <ul id="nav-items" class="hidden md:flex space-x-1 text-blue-500 ml-2 items-center">
+                <ul id="nav-items" class="hidden lg:flex space-x-6 text-[#00296b] font-semibold ml-2 items-center">
                     <li><a href="#" class="nav-item">Beranda</a></li>
                     <li><a href="#about" class="nav-item">Tentang</a></li>
                     
@@ -35,7 +35,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </a>
-                        <ul id="platform-menu" class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg">
+                        <ul id="platform-menu" class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg wider-submenu">
                             <li><a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200">Fitur 1</a></li>
                             <li><a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200">Fitur 2</a></li>
                             <li><a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200">Fitur 3</a></li>
@@ -53,7 +53,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </a>
-                        <ul id="join-menu" class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg">
+                        <ul id="join-menu" class="submenu hidden absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg wider-submenu">
                             <li><a href="#daftar" class="block px-4 py-2 hover:bg-gray-200">Daftar</a></li>
                         </ul>
                     </li>
@@ -66,77 +66,132 @@
         
         
                 <!-- Menu Toggle Button (Hamburger) for Mobile -->
-                <button id="menu-toggle" class="text-[#6A0DAD] text-2xl md:hidden">
+                <button id="menu-toggle" class="text-[#6A0DAD] text-2xl lg:hidden">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </nav>
 
          <!-- Mobile Menu -->
-<div id="mobile-menu" class="hidden fixed inset-0 bg-[#04336c] text-white flex flex-col items-center justify-center z-50 p-4">
-    
+    <div
+    id="mobile-menu"
+    class="hidden fixed inset-0 bg-[#04336c] text-white flex flex-col items-center justify-center z-50 p-4"
+  >
     <!-- Close Button -->
-    <button id="close-menu" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+    <button
+      id="close-menu"
+      class="absolute top-5 right-5 text-white text-3xl font-bold"
+    >
+      &times;
+    </button>
 
     <!-- Mobile Menu List -->
     <ul class="text-center space-y-6 text-lg font-semibold w-full">
-        <li><a href="#" class="block">Beranda</a></li>
-        <li><a href="#about" class="block">Tentang</a></li>
+      <li><a href="#" class="block">Beranda</a></li>
+      <li><a href="#about" class="block">Tentang</a></li>
 
-        <!-- Fitur Dropdown -->
-        <li>
-            <button class="mobile-toggle flex items-center justify-center w-full">
-                <span>Fitur</span>
-                <svg class="w-4 h-4 ml-1 transition-transform transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-            </button>
-            <ul class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2">
-                <li><a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200">Fitur 1</a></li>
-                <li><a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200">Fitur 2</a></li>
-                <li><a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200">Fitur 3</a></li>
-            </ul>
-        </li>
+      <!-- Fitur Dropdown -->
+      <li>
+        <button class="mobile-toggle flex items-center justify-center w-full">
+          <span>Fitur</span>
+          <svg
+            class="w-4 h-4 ml-1 transition-transform transform"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2"
+        >
+          <li>
+            <a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200"
+              >Fitur 1</a
+            >
+          </li>
+          <li>
+            <a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200"
+              >Fitur 2</a
+            >
+          </li>
+          <li>
+            <a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200"
+              >Fitur 3</a
+            >
+          </li>
+        </ul>
+      </li>
 
-        <li><a href="#dampak" class="block">Dampak</a></li>
-        <li><a href="#kegiatan" class="block">Kegiatan</a></li>
+      <li><a href="#dampak" class="block">Dampak</a></li>
+      <li><a href="#kegiatan" class="block">Kegiatan</a></li>
 
-        <!-- Bergabung Dropdown -->
-        <li>
-            <button class="mobile-toggle flex items-center justify-center w-full">
-                <span>Bergabung</span>
-                <svg class="w-4 h-4 ml-1 transition-transform transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-            </button>
-            <ul class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2">
-                <li><a href="#daftar" class="block px-4 py-2 hover:bg-gray-200">Daftar</a></li>
-            </ul>
-        </li>
+      <!-- Bergabung Dropdown -->
+      <li>
+        <button class="mobile-toggle flex items-center justify-center w-full">
+          <span>Bergabung</span>
+          <svg
+            class="w-4 h-4 ml-1 transition-transform transform"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2"
+        >
+          <li>
+            <a href="#daftar" class="block px-4 py-2 hover:bg-gray-200"
+              >Daftar</a
+            >
+          </li>
+        </ul>
+      </li>
     </ul>
 
     <!-- Login Button -->
-    <button id="login-button" class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold">Masuk</button>
-</div>
+    <button
+      id="login-button"
+      class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold"
+    >
+      Masuk
+    </button>
+  </div>
 
 <!-- Berita Section -->
 <section id="berita" class="bg-white py-16 text-gray-900">
     <div class="container mx-auto text-center">
-        <!-- Breadcrumb -->
-        <nav class="text-gray-500 text-sm mb-6 mt-12 text-left">
-            <a href="index.html" class="text-blue-600 hover:underline">Beranda</a> 
-            <span class="mx-2">›</span> 
-            <span class="text-gray-700">Berita</span>
-        </nav>
+    
        <!-- Kembali Button -->
         <div class="flex justify-start">
-            <a href="index.html#berita" class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-gray-700 bg-blue 
+            <a href="index.html#berita" class="inline-flex items-center px-4 py-2 mt-12 border-gray-300 rounded-lg text-gray-700 bg-blue 
                 hover:bg-[#6A0DAD] hover:text-white transition duration-300">
                 &larr; Kembali
             </a>
         </div>
 
-        <h2 class="text-3xl font-extrabold text-[#002b66] uppercase tracking-widest mt-12">SEMUA KEGIATAN</h3>        
+        <h2 class="text-3xl font-extrabold text-[#002b66] uppercase tracking-widest mt-12">SEMUA KEGIATAN</h3>    
+             <!-- Breadcrumb -->
+        <nav class="text-gray-500 text-sm mb-6 mt-3 text-center">
+            <a href="index.html" class="text-blue-600 hover:underline">Beranda</a> 
+            <span class="mx-2">›</span> 
+            <span class="text-gray-700">Kegiatan</span>
+        </nav>      
         <p class="mt-4 text-gray-700 max-w-2xl mx-auto">
             Berbagai kegiatan yang telah kami selenggarakan dalam upaya <br> memperkuat gerakan anti korupsi.
         </p>

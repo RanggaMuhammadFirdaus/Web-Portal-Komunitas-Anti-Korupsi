@@ -1,11 +1,39 @@
 /* Default navbar styles */
 #navbar {
-  background-color: transparent;
+  background-color: white !important;
   transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
+}
+
+/* When scrolled */
+.nav-scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px; /* Reduce padding on scroll */
+}
+
+/* Change text color when scrolled */
+.nav-scrolled .nav-item {
+  color: #00296b  !important;
+  font-weight: 600;
+}
+
+/* Change title color when scrolled */
+.nav-scrolled #navbar-title {
+  color: #00296b !important;
+}
+
+/* Keep the login button the same */
+.nav-scrolled .login-btn {
+  background-color: #176bff !important;
+  color: white !important;
+}
+
+/* Change hamburger button color when scrolled */
+.nav-scrolled #menu-toggle {
+  color: #00296b !important;
 }
 
 /* Hover effect for underline */
@@ -17,6 +45,10 @@
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
+}
+
+.wider-submenu {
+  width: 250px; /* Adjust the width as needed */
 }
 
 /* Mobile Menu */
@@ -67,7 +99,7 @@ html {
 
 /* Make the "Masuk" button full width */
 #mobile-menu button {
-  width: 90%;
+  width: 100%;
   text-align: center;
   padding: 15px 0;
   font-size: 1.2rem;
@@ -87,6 +119,7 @@ html {
 
   .nav-item {
     font-size: 0.9rem; /* Reduce font size for small screens */
+    color: #6a0dad ;
   }
 
   .login-btn {
@@ -241,6 +274,11 @@ html {
 
   .nav-item {
     font-size: 0.95rem;
+  }
+
+  .text-blue-400 {
+    --tw-text-opacity: 1;
+    color: blue;
   }
 
   .login-btn {
