@@ -361,6 +361,17 @@ html {
   }
 }
 
+@media (min-width: 824px) and (max-width: 1020px) {
+  #menu-toggle {
+    display: block !important; /* Force visibility */
+  }
+
+  /* Hide the desktop menu in this range */
+  .desktop-menu {
+    display: none !important;
+  }
+}
+
 /* Perbaikan Footer */
 footer {
   min-height: 220px;

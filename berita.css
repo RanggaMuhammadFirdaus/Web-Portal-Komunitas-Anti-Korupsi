@@ -266,6 +266,17 @@ html {
   }
 }
 
+@media (min-width: 824px) and (max-width: 1020px) {
+  #menu-toggle {
+    display: block !important; /* Force visibility */
+  }
+
+  /* Hide the desktop menu in this range */
+  .desktop-menu {
+    display: none !important;
+  }
+}
+
 /* Tambahkan aturan untuk iPad Mini (768x1024) */
 @media (max-width: 768px) {
   #navbar {
