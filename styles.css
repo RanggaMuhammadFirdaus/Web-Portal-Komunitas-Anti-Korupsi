@@ -70,6 +70,16 @@ html {
   scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+.snap-x {
+  scroll-snap-type: x mandatory;
+}
+.snap-center {
+  scroll-snap-align: center;
+}
+
 /* Mobile Menu */
 #mobile-menu {
   background-color: rgba(4, 25, 56, 0.99);
@@ -203,6 +213,7 @@ html {
   background-color: #f9fafb; /* Light gray for better visibility */
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  
 }
 
 /* Ensure the text is centered */

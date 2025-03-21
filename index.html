@@ -1273,51 +1273,66 @@
         }
       });
 
-      document.addEventListener("DOMContentLoaded", function () {
-        // Auto-scroll for "Berita" Section
-        const beritaCarousel = document.querySelector(
-          "#berita .overflow-x-auto"
-        );
-        if (beritaCarousel) {
-          let beritaScrollAmount = 0;
-          const beritaSlideInterval = setInterval(() => {
-            if (
-              beritaScrollAmount <
-              beritaCarousel.scrollWidth - beritaCarousel.clientWidth
-            ) {
-              beritaScrollAmount += beritaCarousel.clientWidth;
-            } else {
-              beritaScrollAmount = 0;
-            }
-            beritaCarousel.scrollTo({
-              left: beritaScrollAmount,
-              behavior: "smooth",
-            });
-          }, 3000); // Auto-slide every 3 seconds
-        }
+      document.addEventListener('DOMContentLoaded', () => {
+  // Auto-scroll function
+  function autoScroll(carousel) {
+    const gap = 24; // From space-x-6 (1.5rem = 24px)
+    const firstItem = carousel.firstElementChild;
+    if (!firstItem) return;
 
-        // Auto-scroll for "Kegiatan" Section
-        const kegiatanCarousel = document.querySelector(
-          "#kegiatan .overflow-x-auto"
-        );
-        if (kegiatanCarousel) {
-          let kegiatanScrollAmount = 0;
-          const kegiatanSlideInterval = setInterval(() => {
-            if (
-              kegiatanScrollAmount <
-              kegiatanCarousel.scrollWidth - kegiatanCarousel.clientWidth
-            ) {
-              kegiatanScrollAmount += kegiatanCarousel.clientWidth;
-            } else {
-              kegiatanScrollAmount = 0;
-            }
-            kegiatanCarousel.scrollTo({
-              left: kegiatanScrollAmount,
-              behavior: "smooth",
-            });
-          }, 3000); // Auto-slide every 3 seconds
-        }
-      });
+    const itemWidth = firstItem.offsetWidth + gap;
+    const maxScroll = carousel.scrollWidth - carousel.offsetWidth;
+    const nextScroll = carousel.scrollLeft + itemWidth;
+
+    if (nextScroll >= maxScroll) {
+      carousel.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      carousel.scrollTo({ left: nextScroll, behavior: 'smooth' });
+    }
+  }
+
+  // Initialize carousels
+  document.querySelectorAll('.flex.space-x-6.overflow-x-auto').forEach((carousel) => {
+    let intervalId;
+    let isPaused = false;
+
+    // Start auto-scroll
+    const startInterval = () => {
+      intervalId = setInterval(() => {
+        if (!isPaused) autoScroll(carousel);
+      }, 3000);
+    };
+
+    // Pause control
+    const stopInterval = () => {
+      clearInterval(intervalId);
+    };
+
+    startInterval();
+
+    // Pause events
+    carousel.addEventListener('mousedown', () => {
+      isPaused = true;
+      stopInterval();
+    });
+
+    carousel.addEventListener('touchstart', () => {
+      isPaused = true;
+      stopInterval();
+    }, { passive: true });
+
+    // Resume events
+    const resume = () => {
+      isPaused = false;
+      stopInterval();
+      startInterval();
+    };
+
+    carousel.addEventListener('mouseup', resume);
+    carousel.addEventListener('touchend', resume);
+    carousel.addEventListener('mouseleave', resume);
+  });
+});
 
       function redirectToDetail(
         title,
