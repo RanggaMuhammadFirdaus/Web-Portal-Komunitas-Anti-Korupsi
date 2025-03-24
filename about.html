@@ -42,8 +42,8 @@
           id="nav-items"
           class="hidden lg:flex space-x-6 text-white ml-2 items-center"
         >
-          <li><a href="#beranda" class="nav-item">Beranda</a></li>
-          <li><a href="#about" class="nav-item">Tentang</a></li>
+          <li><a href="index.html#beranda" class="nav-item">Beranda</a></li>
+          <li><a href="index.html#about" class="nav-item">Tentang</a></li>
 
           <!-- Platform with Submenu -->
           <li class="relative">
@@ -90,8 +90,8 @@
             </ul>
           </li>
 
-          <li><a href="#dampak" class="nav-item">Dampak</a></li>
-          <li><a href="#kegiatan" class="nav-item">Kegiatan</a></li>
+          <li><a href="index.html#dampak" class="nav-item">Dampak</a></li>
+          <li><a href="index.html#kegiatan" class="nav-item">Kegiatan</a></li>
 
           <!-- Bergabung with Submenu -->
           <li class="relative">
@@ -160,8 +160,8 @@
 
       <!-- Mobile Menu List -->
       <ul class="text-center space-y-6 text-lg font-semibold w-full">
-        <li><a href="#beranda" class="block">Beranda</a></li>
-        <li><a href="#about" class="block">Tentang</a></li>
+        <li><a href="index.html#beranda" class="block">Beranda</a></li>
+        <li><a href="index.html#about" class="block">Tentang</a></li>
 
         <!-- Fitur Dropdown -->
         <li>
@@ -203,8 +203,8 @@
           </ul>
         </li>
 
-        <li><a href="#dampak" class="block">Dampak</a></li>
-        <li><a href="#kegiatan" class="block">Kegiatan</a></li>
+        <li><a href="index.html#dampak" class="block">Dampak</a></li>
+        <li><a href="index.html#kegiatan" class="block">Kegiatan</a></li>
 
         <!-- Bergabung Dropdown -->
         <li>
@@ -503,38 +503,51 @@
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-    // Ambil parameter dari URL
+      // Ambil parameter dari URL
+      const params = new URLSearchParams(window.location.search);
+      const section = params.get("section");
+  
+      // Ambil semua elemen dengan class "section"
+      const sections = document.querySelectorAll(".section");
+  
+      if (section) {
+          let found = false;
+          
+          sections.forEach(sec => {
+              if (sec.id === section) {
+                  sec.style.display = "block"; // Tampilkan hanya bagian yang sesuai
+                  found = true;
+              } else {
+                  sec.style.display = "none"; // Sembunyikan bagian lainnya
+              }
+          });
+  
+          // Scroll ke bagian yang dipilih
+          if (found) {
+              setTimeout(() => {
+                  document.getElementById(section).scrollIntoView({
+                      behavior: "smooth",
+                      block: "start"
+                  });
+              }, 300); // Delay kecil agar lebih smooth
+          }
+      } else {
+          // Jika tidak ada parameter, tampilkan semua section
+          sections.forEach(sec => sec.style.display = "block");
+      }
+  });
+
+
+    // Ambil query string dari URL
     const params = new URLSearchParams(window.location.search);
-    const section = params.get("section");
-
-    // Ambil semua elemen dengan class "section"
-    const sections = document.querySelectorAll(".section");
-
+    // Tampilkan bagian yang sesuai berdasarkan query string
     if (section) {
-        sections.forEach(sec => {
-            if (sec.id === section) {
-                sec.style.display = "block"; // Tampilkan hanya bagian yang sesuai
-            } else {
-                sec.style.display = "none"; // Sembunyikan bagian lainnya
-            }
-        });
-
-        // Scroll ke bagian yang dipilih
-        const targetElement = document.getElementById(section);
-        if (targetElement) {
-            requestAnimationFrame(() => {
-                setTimeout(() => {
-                    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-                }, 300); // Delay kecil agar lebih smooth
-            });
-        }
-    } else {
-        // Jika tidak ada parameter, tampilkan semua section
-        sections.forEach(sec => {
-            sec.style.display = "block";
-        });
+        document.getElementById(section).scrollIntoView({ behavior: "smooth" });
     }
-});
+
+  
+
+  
 
 
     // Jalankan fungsi saat halaman dimuat

@@ -115,6 +115,15 @@ body {
 /* Bagian setiap section */
 .section {
     margin-bottom: 30px;
+    /* display: none; */
+}
+
+/* .section:target {
+  display: block; /* Ditampilkan jika memiliki ID yang cocok */
+/* } */ */
+
+.section-content {
+  display: none; /* Sembunyikan semua bagian awalnya */
 }
 
 /* Judul utama */
