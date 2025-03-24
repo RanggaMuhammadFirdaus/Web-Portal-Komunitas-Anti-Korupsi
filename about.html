@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anti-Korupsi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/76332dff60.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body class="bg-white font-[Poppins]">
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 p-4 bg-[#04336c] transition duration-300"
+    >
+      <div class="container mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="flex items-center">
+          <span
+            class="bg-[#002b66] text-white font-bold text-sm px-2 py-1 rounded-full w-5 h-5 flex items-center justify-center"
+            >AK</span
+          >
+          <span id="navbar-title" class="text-white text-2xl font-bold ml-2"
+            >AntiKorupsi</span
+          >
+        </a>
+
+        <!-- Navbar Menu -->
+        <ul
+          id="nav-items"
+          class="hidden lg:flex space-x-6 text-white ml-2 items-center"
+        >
+          <li><a href="#beranda" class="nav-item">Beranda</a></li>
+          <li><a href="#about" class="nav-item">Tentang</a></li>
+
+          <!-- Platform with Submenu -->
+          <li class="relative">
+            <a
+              href="#"
+              class="nav-item toggle-menu flex items-center space-x-1"
+              data-menu="platform-menu"
+            >
+              <span>Fitur</span>
+              <svg
+                class="w-4 h-4 transition-transform duration-300 ease-in-out"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              id="platform-menu"
+              class="submenu hidden -left-1/2 translate-1/2 absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg wider-submenu"
+            >
+              <li>
+                <a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200"
+                  >Fitur 1</a
+                >
+              </li>
+              <li>
+                <a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200"
+                  >Fitur 2</a
+                >
+              </li>
+              <li>
+                <a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200"
+                  >Fitur 3</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="#dampak" class="nav-item">Dampak</a></li>
+          <li><a href="#kegiatan" class="nav-item">Kegiatan</a></li>
+
+          <!-- Bergabung with Submenu -->
+          <li class="relative">
+            <a
+              href="#"
+              class="nav-item toggle-menu flex items-center space-x-1"
+              data-menu="join-menu"
+            >
+              <span>Bergabung</span>
+              <svg
+                class="w-4 h-4 transition-transform duration-300 ease-in-out"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </a>
+            <ul
+              id="join-menu"
+              class="submenu hidden -left-1/2 translate-1/2 absolute bg-white text-black mt-2 space-y-2 shadow-lg rounded-lg"
+            >
+              <li>
+                <a href="#daftar" class="block px-4 py-2 hover:bg-gray-200 wider-submenu"
+                  >Daftar</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- Login Button -->
+          <li>
+            <a
+              href="#"
+              class="bg-[#176BFF] text-white px-3 py-2 rounded-md font-semibold hidden md:flex items-center"
+              >Masuk</a
+            >
+          </li>
+        </ul>
+
+        <!-- Menu Toggle Button (Hamburger) for Mobile -->
+        <button id="menu-toggle" class="text-white text-2xl xl:hidden">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="hidden fixed overflow-hidden overflow-y-auto inset-0 bg-[#04336c] text-white flex flex-col items-center justify-center z-50 p-4"
+    >
+      <!-- Close Button -->
+      <button
+        id="close-menu"
+        class="absolute top-5 right-5 text-white text-3xl font-bold"
+      >
+        &times;
+      </button>
+
+      <!-- Mobile Menu List -->
+      <ul class="text-center space-y-6 text-lg font-semibold w-full">
+        <li><a href="#beranda" class="block">Beranda</a></li>
+        <li><a href="#about" class="block">Tentang</a></li>
+
+        <!-- Fitur Dropdown -->
+        <li>
+          <button class="mobile-toggle flex items-center justify-center w-full">
+            <span>Fitur</span>
+            <svg
+              class="w-4 h-4 ml-1 transition-transform transform"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <ul
+            class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2"
+          >
+            <li>
+              <a href="#fitur1" class="block px-4 py-2 hover:bg-gray-200"
+                >Fitur 1</a
+              >
+            </li>
+            <li>
+              <a href="#fitur2" class="block px-4 py-2 hover:bg-gray-200"
+                >Fitur 2</a
+              >
+            </li>
+            <li>
+              <a href="#fitur3" class="block px-4 py-2 hover:bg-gray-200"
+                >Fitur 3</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="#dampak" class="block">Dampak</a></li>
+        <li><a href="#kegiatan" class="block">Kegiatan</a></li>
+
+        <!-- Bergabung Dropdown -->
+        <li>
+          <button class="mobile-toggle flex items-center justify-center w-full">
+            <span>Bergabung</span>
+            <svg
+              class="w-4 h-4 ml-1 transition-transform transform"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <ul
+            class="mobile-submenu hidden space-y-2 bg-[#002b66] p-2 rounded-md mt-2"
+          >
+            <li>
+              <a href="#daftar" class="block px-4 py-2 hover:bg-gray-200"
+                >Daftar</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Login Button -->
+      <button
+        id="login-button"
+        class="mt-6 bg-[#176BFF] text-white px-6 py-3 rounded-md font-semibold"
+      >
+        Masuk
+      </button>
+    </div>
+
+    <div class="content">
+    <div id="integritas" class="section mt-24">
+        <h2>Integritas</h2>
+        <img src="images/integritas.jpg" alt="Integritas" class="image-center">
+        
+        <h3>Apa itu Integritas?</h3>
+        <p>Integritas adalah nilai fundamental yang mencerminkan kejujuran, moralitas, dan tanggung jawab dalam menjalankan tugas atau peran.</p>
+        <p>Seseorang yang memiliki integritas akan selalu bertindak dengan jujur dan konsisten, baik di hadapan orang lain maupun saat tidak diawasi.</p>
+
+        <h3>Mengapa Integritas Penting?</h3>
+        <ul>
+            <li><strong>Membangun Kepercayaan:</strong> Integritas menciptakan lingkungan kerja dan sosial yang penuh kepercayaan.</li>
+            <li><strong>Transparansi dan Akuntabilitas:</strong> Dengan bersikap jujur, seseorang dapat mempertanggungjawabkan tindakannya secara jelas.</li>
+            <li><strong>Meningkatkan Reputasi:</strong> Individu atau organisasi yang berintegritas dihormati dan dianggap sebagai teladan.</li>
+        </ul>
+
+        <h3>Contoh Penerapan Integritas:</h3>
+        <ul>
+            <li>Seorang pemimpin yang tetap jujur meskipun dihadapkan pada situasi sulit.</li>
+            <li>Karyawan yang tidak menyalahgunakan wewenang atau sumber daya perusahaan.</li>
+            <li>Organisasi yang mengedepankan transparansi dalam keuangan dan pengambilan keputusan.</li>
+        </ul>
+    </div>
+
+    <div id="keadilan" class="section">
+        <h2>Keadilan</h2>
+        <img src="images/timbangan.png" alt="Integritas" class="image-center">
+        <h3>Apa itu Keadilan?</h3>
+        <p>Keadilan adalah prinsip di mana setiap individu diperlakukan dengan setara, mendapatkan hak yang sama, dan tidak didiskriminasi berdasarkan ras, agama, jenis kelamin, atau status sosial.</p>
+
+        <h3>Mengapa Keadilan Itu Krusial?</h3>
+        <ul>
+            <li><strong>Mencegah Ketimpangan Sosial:</strong> Dengan adanya keadilan, semua orang memiliki peluang yang sama dalam berbagai aspek kehidupan.</li>
+            <li><strong>Menjaga Keharmonisan:</strong> Masyarakat yang adil lebih stabil dan harmonis karena tidak ada pihak yang merasa dirugikan.</li>
+            <li><strong>Meningkatkan Kepercayaan dalam Sistem Hukum:</strong> Jika hukum ditegakkan dengan adil, masyarakat akan lebih percaya terhadap sistem pemerintahan dan hukum.</li>
+        </ul>
+
+        <h3>Contoh Implementasi Keadilan:</h3>
+        <ul>
+            <li>Kebijakan perusahaan yang memberikan kesempatan kerja yang setara.</li>
+            <li>Sistem hukum yang memastikan tidak ada perlakuan khusus bagi individu tertentu.</li>
+            <li>Pemerintah yang mengalokasikan sumber daya dengan merata tanpa memihak golongan tertentu.</li>
+        </ul>
+    </div>
+    <div id="komunitas" class="section">
+        <h2>Komunitas</h2>
+        <img src="images/group.png" alt="Integritas" class="image-center">
+        <h3>Apa itu Komunitas?</h3>
+        <p>Komunitas adalah sekelompok individu yang memiliki tujuan atau kepentingan yang sama dan bekerja bersama untuk mencapainya.</p>
+    
+        <h3>Mengapa Komunitas Itu Penting?</h3>
+        <ul>
+            <li><strong>Memperkuat Solidaritas:</strong> Komunitas membangun hubungan yang kuat antaranggota.</li>
+            <li><strong>Mendukung Perubahan Positif:</strong> Bersama, komunitas dapat menciptakan perubahan yang lebih besar.</li>
+            <li><strong>Menyediakan Ruang Belajar:</strong> Komunitas memungkinkan anggotanya untuk berbagi ilmu dan pengalaman.</li>
+        </ul>
+    
+        <h3>Contoh Aktivitas Komunitas:</h3>
+        <ul>
+            <li>Forum diskusi dan webinar anti-korupsi.</li>
+            <li>Kampanye sosial dan aksi nyata dalam masyarakat.</li>
+            <li>Pelatihan dan edukasi tentang transparansi dan integritas.</li>
+        </ul>
+    </div>
+    
+    <div class="button-container">
+        <a href="index.html #about" class="back-button">⬅ Kembali</a>
+    </div>
+    
+</div>
+
+     <!-- Footer -->
+     <footer class="bg-[#001533] text-gray-300 py-10">
+        <div class="max-w-7xl px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Kolom 1: Logo dan Deskripsi -->
+          <div>
+            <h2 class="text-lg font-bold flex items-center text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-blue-400 mr-2"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              AntiKorupsi
+            </h2>
+            <p class="text-gray-400 mt-2 text-sm leading-relaxed">
+              Membangun masyarakat yang transparan dan bebas korupsi melalui aksi
+              komunitas dan edukasi.
+            </p>
+            <!-- Sosial Media -->
+            <div class="flex space-x-4 mt-3 text-gray-400">
+              <a href="#" class="hover:text-white">
+                <i class="fa-brands fa-facebook text-xl"></i>
+              </a>
+              <a href="#" class="hover:text-white">
+                <i class="fa-brands fa-twitter text-xl"></i>
+              </a>
+              <a href="#" class="hover:text-white">
+                <i class="fa-brands fa-linkedin text-xl"></i>
+              </a>
+              <a href="#" class="hover:text-white">
+                <i class="fa-brands fa-instagram text-xl"></i>
+              </a>
+            </div>
+          </div>
+  
+          <!-- Kolom 2: Tautan Cepat -->
+          <div>
+            <h3 class="font-semibold text-white">Tautan Cepat</h3>
+            <ul class="mt-3 space-y-2">
+              <li><a href="#" class="hover:text-blue-400">Beranda</a></li>
+              <li><a href="#about" class="hover:text-blue-400">Tentang</a></li>
+              <li><a href="#platform" class="hover:text-blue-400">Fitur</a></li>
+              <li><a href="#dampak" class="hover:text-blue-400">Dampak</a></li>
+              <li><a href="#" class="hover:text-blue-400">Bergabung</a></li>
+            </ul>
+          </div>
+  
+          <!-- Kolom 3: Sumber Daya -->
+          <div>
+            <h3 class="font-semibold text-white">Sumber Daya</h3>
+            <ul class="mt-3 space-y-2">
+              <li><a href="#" class="hover:text-blue-400">Blog</a></li>
+              <li><a href="#" class="hover:text-blue-400">Studi Kasus</a></li>
+              <li><a href="#" class="hover:text-blue-400">Laporan</a></li>
+              <li><a href="#" class="hover:text-blue-400">Edukasi</a></li>
+              <li><a href="#" class="hover:text-blue-400">Alat</a></li>
+            </ul>
+          </div>
+  
+          <!-- Kolom 4: Kontak -->
+          <div>
+            <h3 class="font-semibold text-white">Hubungi Kami</h3>
+            <ul class="mt-3 space-y-2">
+              <li class="flex items-center">
+                <i class="fa-solid fa-envelope mr-2"></i>
+                <a
+                  href="mailto:kontak@antikorupsi.org"
+                  class="hover:text-blue-400 truncate overflow-hidden block w-full"
+                >
+                  kontak@antikorupsi.org
+                </a>
+              </li>
+              <li class="flex items-center">
+                <i class="fa-brands fa-github mr-2"></i>
+                <a
+                  href="#"
+                  class="hover:text-blue-400 truncate overflow-hidden block w-full"
+                  >GitHub</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+  
+      <hr class="w-1/2">
+  
+      <footer class="bg-[#001533] text-white py-10 px-6">
+        <div class="container mx-auto text-center mt-auto">
+          <p class="text-white text-center">&copy; 2025 Portal Komunitas AntiKorupsi. Hak Cipta Dilindungi.</p>
+        </div>
+      </footer>
+
+      <script>
+        // Ambil parameter dari URL
+        document.addEventListener("DOMContentLoaded", function () {
+    let navbar = document.getElementById("navbar");
+    let menuToggle = document.getElementById("menu-toggle");
+    let mobileMenu = document.getElementById("mobile-menu");
+    let closeMenu = document.getElementById("close-menu");
+    let menuLinks = document.querySelectorAll("#mobile-menu a");
+    let toggleMenus = document.querySelectorAll(".toggle-menu");
+    const urlParams = new URLSearchParams(window.location.search);
+        const section = urlParams.get('section');
+
+
+    // Efek navbar berubah warna saat scroll (TIDAK DIUBAH)
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 10) {
+            navbar.classList.add("nav-scrolled");
+        } else {
+            navbar.classList.remove("nav-scrolled");
+        }
+    });
+
+    // Toggle mobile menu saat tombol hamburger ditekan
+    if (menuToggle) {
+        menuToggle.addEventListener("click", function () {
+            mobileMenu.classList.toggle("active");
+        });
+    }
+
+    // Tutup menu mobile saat tombol close ditekan
+    if (closeMenu) {
+        closeMenu.addEventListener("click", function () {
+            mobileMenu.classList.remove("active");
+        });
+    }
+
+    // Tutup menu mobile jika salah satu item menu diklik
+    menuLinks.forEach(item => {
+        item.addEventListener("click", function () {
+            mobileMenu.classList.remove("active");
+        });
+    });
+
+    // Toggle submenu saat menu diklik
+    toggleMenus.forEach(menu => {
+        menu.addEventListener("click", function (event) {
+            event.preventDefault();
+            const menuId = menu.getAttribute("data-menu");
+            const submenu = document.getElementById(menuId);
+            
+            if (submenu) {
+                const isHidden = submenu.classList.contains("hidden");
+
+                // Tutup semua submenu lain sebelum membuka yang baru
+                document.querySelectorAll(".submenu").forEach(item => {
+                    item.classList.add("hidden");
+                });
+
+                // Tampilkan submenu yang dipilih
+                if (isHidden) {
+                    submenu.classList.remove("hidden");
+                }
+            }
+        });
+    });
+
+    
+        // Toggle Submenus in Mobile
+        document.querySelectorAll('.mobile-toggle').forEach((toggle) => {
+            toggle.addEventListener("click", function () {
+                let submenu = this.nextElementSibling;
+                submenu.classList.toggle("hidden");
+                let icon = this.querySelector("svg");
+                icon.classList.toggle("rotate-180");
+            });
+        });
+
+    // Tutup submenu jika klik di luar area menu
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".relative")) {
+            document.querySelectorAll(".submenu").forEach(menu => {
+                menu.classList.add("hidden");
+            });
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    // Ambil parameter dari URL
+    const params = new URLSearchParams(window.location.search);
+    const section = params.get("section");
+
+    // Ambil semua elemen dengan class "section"
+    const sections = document.querySelectorAll(".section");
+
+    if (section) {
+        sections.forEach(sec => {
+            if (sec.id === section) {
+                sec.style.display = "block"; // Tampilkan hanya bagian yang sesuai
+            } else {
+                sec.style.display = "none"; // Sembunyikan bagian lainnya
+            }
+        });
+
+        // Scroll ke bagian yang dipilih
+        const targetElement = document.getElementById(section);
+        if (targetElement) {
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 300); // Delay kecil agar lebih smooth
+            });
+        }
+    } else {
+        // Jika tidak ada parameter, tampilkan semua section
+        sections.forEach(sec => {
+            sec.style.display = "block";
+        });
+    }
+});
+
+
+    // Jalankan fungsi saat halaman dimuat
+    window.onload = scrollToSection;
+    
+    
+        // Tampilkan konten sesuai pilihan
+        if (section && content[section]) {
+            document.getElementById("title").innerText = content[section].title;
+            document.getElementById("description").innerHTML = content[section].description;
+        } else {
+            document.getElementById("title").innerText = "Halaman Tidak Ditemukan";
+            document.getElementById("description").innerText = "Maaf, halaman yang Anda cari tidak tersedia.";
+        }
+    });
+        </script>
+  
+
+
+    
