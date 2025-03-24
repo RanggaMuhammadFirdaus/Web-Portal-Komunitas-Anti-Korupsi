@@ -388,7 +388,19 @@
     <section id="about" class="bg-white py-16">
       <div class="container mx-auto text-center">
         <h3 class="text-sm font-semibold text-blue-600 uppercase">
-          TENTANG MISI KAMI
+          VISI KAMI
+        </h3>
+        <h2 class="text-4xl font-bold text-[#012A5B] mt-2">
+          Bersama Lawan Korupsi, Wujudkan Negeri Berintegritas!
+        </h2>
+        <p class="mt-4 text-gray-600">
+          Mewujudkan masyarakat yang berintegritas, transparan, dan bebas dari korupsi, 
+          <br>di mana setiap individu berperan aktif dalam menciptakan tata kelola yang adil, akuntabel, 
+          <br>dan berkelanjutan untuk kesejahteraan bersama.
+        </p>
+        <br>
+        <h3 class="text-sm font-semibold text-blue-600 uppercase">
+          MISI KAMI
         </h3>
         <h2 class="text-4xl font-bold text-[#012A5B] mt-2">
           Membangun Masyarakat Bebas Korupsi
@@ -401,65 +413,79 @@
         </p>
 
         <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Integritas -->
-          <div class="text-center">
-            <div class="flex justify-center">
-              <div class="bg-[#E8F1FF] p-3 rounded-full">
-                <img
-                  src="images/security.png"
-                  alt="Integritas Icon"
-                  class="w-12 h-12"
-                />
-              </div>
+          <!-- Integritas Card -->
+          <div class="relative bg-white p-6 rounded-lg shadow-lg h-full">
+            <div class="flex justify-center mb-4">
+              <img src="images/security.png" alt="Integritas Icon" class="card-image w-12 h-12">
             </div>
-            <h3 class="text-xl font-semibold text-blue-900 mt-4">Integritas</h3>
-            <p class="text-gray-600 mt-2">
-              Kami menjunjung tinggi standar <br />
-              kejujuran dan etika tertinggi dalam <br />
-              setiap aksi dan inisiatif kami.
-            </p>
+            <div class="front-panel" id="integritas-front">
+              <h3 class="text-xl font-semibold text-blue-900 cursor-pointer" onclick="toggleCard('integritas')">
+                Integritas ➝
+              </h3>
+              <p class="text-gray-600 mt-2">
+                Kami menjunjung tinggi standar kejujuran dan etika tertinggi dalam setiap aksi dan inisiatif kami.
+              </p>
+            </div>
+            <div class="back-panel hidden-panel" id="integritas-back">
+              <h3 class="text-xl font-semibold text-blue-900">
+                Integritas - Detail
+              </h3>
+              <p class="text-gray-600 mt-2">
+                Integritas berarti melakukan hal yang benar bahkan ketika tidak ada yang melihat. Ini adalah dasar dari transparansi.
+              </p>
+              <button class="mt-4 text-blue-600 underline" onclick="toggleCard('integritas')">Kembali</button>
+            </div>
           </div>
-
-          <!-- Keadilan -->
-          <div class="text-center">
-            <div class="flex justify-center">
-              <div class="bg-[#E8F1FF] p-3 rounded-full">
-                <img
-                  src="images/timbangan.png"
-                  alt="Keadilan Icon"
-                  class="w-12 h-12"
-                />
-              </div>
+        
+          <!-- Keadilan Card -->
+          <div class="relative bg-white p-6 rounded-lg shadow-lg h-full">
+            <div class="flex justify-center mb-4">
+              <img src="images/timbangan.png" alt="Keadilan Icon" class="card-image w-12 h-12">
             </div>
-            <h3 class="text-xl font-semibold text-blue-900 mt-4">Keadilan</h3>
-            <p class="text-gray-600 mt-2">
-              Kami bekerja untuk memastikan akses <br />
-              yang setara terhadap keadilan dan <br />
-              akuntabilitas untuk semua lapisan <br />
-              masyarakat.
-            </p>
+            <div class="front-panel" id="keadilan-front">
+              <h3 class="text-xl font-semibold text-blue-900 cursor-pointer" onclick="toggleCard('keadilan')">
+                Keadilan ➝
+              </h3>
+              <p class="text-gray-600 mt-2">
+                Kami bekerja untuk memastikan akses yang setara terhadap keadilan dan akuntabilitas untuk semua.
+              </p>
+            </div>
+            <div class="back-panel hidden-panel" id="keadilan-back">
+              <h3 class="text-xl font-semibold text-blue-900">
+                Keadilan - Detail
+              </h3>
+              <p class="text-gray-600 mt-2">
+                Keadilan bukan hanya hukum, tetapi perlakuan setara bagi semua orang tanpa diskriminasi.
+              </p>
+              <button class="mt-4 text-blue-600 underline" onclick="toggleCard('keadilan')">Kembali</button>
+            </div>
           </div>
-
-          <!-- Komunitas -->
-          <div class="text-center">
-            <div class="flex justify-center">
-              <div class="bg-[#E8F1FF] p-3 rounded-full">
-                <img
-                  src="images/group.png"
-                  alt="Komunitas Icon"
-                  class="w-12 h-12"
-                />
-              </div>
+        
+          <!-- Komunitas Card -->
+          <div class="relative bg-white p-6 rounded-lg shadow-lg h-full">
+            <div class="flex justify-center mb-4">
+              <img src="images/group.png" alt="Komunitas Icon" class="card-image w-12 h-12">
             </div>
-            <h3 class="text-xl font-semibold text-blue-900 mt-4">Komunitas</h3>
-            <p class="text-gray-600 mt-2">
-              Kami membangun lingkungan <br />
-              kolaboratif di mana warga dapat <br />
-              bekerja sama untuk mendorong <br />
-              perubahan yang berarti.
-            </p>
+            <div class="front-panel" id="komunitas-front">
+              <h3 class="text-xl font-semibold text-blue-900 cursor-pointer" onclick="toggleCard('komunitas')">
+                Komunitas ➝
+              </h3>
+              <p class="text-gray-600 mt-2">
+                Kami membangun lingkungan kolaboratif di mana warga dapat bekerja sama untuk perubahan.
+              </p>
+            </div>
+            <div class="back-panel hidden-panel" id="komunitas-back">
+              <h3 class="text-xl font-semibold text-blue-900">
+                Komunitas - Detail
+              </h3>
+              <p class="text-gray-600 mt-2">
+                Komunitas adalah kekuatan dalam perubahan. Bersama, kita bisa menciptakan dunia yang lebih baik.
+              </p>
+              <button class="mt-4 text-blue-600 underline" onclick="toggleCard('komunitas')">Kembali</button>
+            </div>
           </div>
         </div>
+        
       </div>
     </section>
 
@@ -1333,6 +1359,19 @@
     carousel.addEventListener('mouseleave', resume);
   });
 });
+
+function toggleCard(id) {
+      const frontPanel = document.getElementById(id + "-front");
+      const backPanel = document.getElementById(id + "-back");
+
+      if (frontPanel.classList.contains("hidden-panel")) {
+        frontPanel.classList.remove("hidden-panel");
+        backPanel.classList.add("hidden-panel");
+      } else {
+        frontPanel.classList.add("hidden-panel");
+        backPanel.classList.remove("hidden-panel");
+      }
+    }
 
       function redirectToDetail(
         title,

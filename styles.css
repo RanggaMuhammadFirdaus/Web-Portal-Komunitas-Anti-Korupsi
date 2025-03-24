@@ -48,6 +48,18 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Panel pada Visi Misi */
+
+.hidden-panel {
+  display: none;
+}
+
+.card-image {
+  height: 80px;
+  margin: 0 auto;
+}
+
+
 .wider-submenu {
   width: 250px; /* Adjust the width as needed */
 }
