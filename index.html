@@ -642,6 +642,56 @@
       </div>
     </section>
 
+    <!-- Testimoni Section -->
+<section id="testimoni" class="bg-gray-100 py-16 text-center">
+  <div class="container mx-auto">
+    <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-widest">
+      TESTIMONI
+    </h3>
+    <h2 class="text-3xl font-extrabold mt-2">Apa Kata Mereka?</h2>
+    
+    <!-- Slider Container -->
+    <div class="relative max-w-3xl mx-auto mt-8 overflow-hidden">
+      <div id="testimonial-slider" class="flex transition-transform duration-500">
+        <!-- Testimoni 1 -->
+        <div class="min-w-full p-6 bg-white rounded-lg shadow">
+          <p class="text-lg italic">"Gerakan ini membuat saya lebih sadar akan pentingnya transparansi dalam pemerintahan."</p>
+          <h4 class="mt-4 font-bold">- Budi Santoso</h4>
+        </div>
+        <!-- Testimoni 2 -->
+        <div class="min-w-full p-6 bg-white rounded-lg shadow">
+          <p class="text-lg italic">"Saya merasa lebih berani untuk melaporkan tindak korupsi setelah bergabung dengan komunitas ini."</p>
+          <h4 class="mt-4 font-bold">- Siti Aisyah</h4>
+        </div>
+        <!-- Testimoni 3 -->
+        <div class="min-w-full p-6 bg-white rounded-lg shadow">
+          <p class="text-lg italic">"Edukasi yang diberikan sangat membantu masyarakat memahami bahaya korupsi."</p>
+          <h4 class="mt-4 font-bold">- Rizky Hidayat</h4>
+        </div>
+        <!-- Testimoni 4 -->
+        <div class="min-w-full p-6 bg-white rounded-lg shadow">
+          <p class="text-lg italic">"Sebuah gerakan yang benar-benar memberikan dampak nyata bagi perubahan di Indonesia."</p>
+          <h4 class="mt-4 font-bold">- Dewi Lestari</h4>
+        </div>
+        <!-- Testimoni 5 -->
+        <div class="min-w-full p-6 bg-white rounded-lg shadow">
+          <p class="text-lg italic">"Saya bangga menjadi bagian dari komunitas ini yang berjuang untuk Indonesia bebas korupsi."</p>
+          <h4 class="mt-4 font-bold">- Ahmad Fauzi</h4>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2  text-black">
+        <
+      </button>
+      <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2  text-black">
+        >
+      </button>
+    </div>
+  </div>
+</section>
+
+
     <!-- Dampak Kami Section -->
     <section id="dampak" class="bg-[#012A5B] py-16 text-white">
       <div class="container mx-auto text-center">
@@ -1210,6 +1260,12 @@
         let menuLinks = document.querySelectorAll("#mobile-menu a");
         let toggleMenus = document.querySelectorAll(".toggle-menu");
 
+        const slider = document.getElementById("testimonial-slider");
+        const slides = document.querySelectorAll("#testimonial-slider > div");
+        const totalSlides = slides.length;
+        const nextButton = document.getElementById("next");
+        const prevButton = document.getElementById("prev");
+
         // Efek navbar berubah warna saat scroll (TIDAK DIUBAH)
         window.addEventListener("scroll", function () {
           if (window.scrollY > 10) {
@@ -1358,6 +1414,38 @@
     carousel.addEventListener('touchend', resume);
     carousel.addEventListener('mouseleave', resume);
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  let index = 0;
+  const slider = document.getElementById("testimonial-slider");
+  const slides = document.querySelectorAll("#testimonial-slider > div");
+  const totalSlides = slides.length;
+  const nextButton = document.getElementById("next");
+  const prevButton = document.getElementById("prev");
+
+  // Ensure buttons exist
+  if (!slider || !nextButton || !prevButton) {
+    console.error("Testimonial slider or buttons not found!");
+    return;
+  }
+
+  function showSlide() {
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    index = (index + 1) % totalSlides;
+    showSlide();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + totalSlides) % totalSlides;
+    showSlide();
+  }
+
+  nextButton.addEventListener("click", nextSlide);
+  prevButton.addEventListener("click", prevSlide);
 });
 
 function toggleCard(id) {
